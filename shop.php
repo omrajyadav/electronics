@@ -45,14 +45,14 @@ include "db_connection.php";
                     <div class="col-12">
                         <div class="d-flex flex-wrap justify-content-center gap-3">
                             <a href="shop.php"
-                                class="btn btn-outline-primary rounded-pill px-4 <?= !isset($_GET['id']) ? 'active' : '' ?>">All
+                                class="btn btn-outline-dark rounded-pill px-4 <?= !isset($_GET['id']) ? 'active' : '' ?>">All
                                 Products</a>
                             <?php
                             $cat_query = "SELECT * FROM tbl_category";
                             $cat_result = mysqli_query($conn, $cat_query);
                             while ($cat = mysqli_fetch_assoc($cat_result)) {
                                 $active = (isset($_GET['id']) && $_GET['id'] == $cat['id']) ? 'active' : '';
-                                echo '<a href="shop.php?id=' . $cat['id'] . '" class="btn btn-outline-primary rounded-pill px-4 ' . $active . '">' . $cat['name'] . '</a>';
+                                echo '<a href="shop.php?id=' . $cat['id'] . '" class="btn btn-outline-dark rounded-pill px-4 ' . $active . '">' . $cat['name'] . '</a>';
 
                             }
                             ?>
@@ -91,7 +91,7 @@ include "db_connection.php";
                                             alt="<?= htmlspecialchars($row["name"]) ?>">
 
                                         <?php if ($row["discount_percentaged"] > 0): ?>
-                                            <span class="badge bg-warning position-absolute top-0 text-dark discount-badge ">
+                                            <span class="badge bg-warning position-absolute top-0 start-0 ">
                                                 -<?= $row["discount_percentaged"] ?>%
                                             </span>
                                         <?php endif; ?>

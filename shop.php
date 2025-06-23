@@ -116,7 +116,7 @@ include "db_connection.php";
                                     <button type="submit" class="btn btn-primary flex-grow-1">
                                         <i class="fas fa-shopping-cart me-2"></i>Add to Cart
                                     </button>
-                                    <a href="wishlist.php?id=<?= $row['id'] ?>" class="btn btn-outline-secondary">
+                                    <a href="wishlist_insert.php?id=<?= $row['id'] ?>" class="btn btn-outline-secondary">
                                         <i class="fas fa-eye"></i>
                                     </a>
                                 </form>

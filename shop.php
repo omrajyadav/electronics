@@ -87,7 +87,7 @@ include "db_connection.php";
                                 <?php endif; ?>
 
                                 <div class="product-actions position-absolute top-0 end-0 p-2">
-                                    <form action="wishlist_add.php" method="post" class="d-inline">
+                                    <form action="single-product.php" method="post" class="d-inline">
                                         <input type="hidden" name="id" value="<?= $row['id'] ?>">
                                         <button type="submit" class="btn btn-sm btn-light rounded-circle shadow-sm">
                                             <i class="fas fa-heart text-danger"></i>

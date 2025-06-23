@@ -1,13 +1,14 @@
 <?php
 include "header.php";
 include "db_connection.php";
-$product_id = $_GET["id"];
+$product_id = $_GET['id'] ?? 0;
 $query = "SELECT * FROM  `tbl_product` WHERE `id`= $product_id ";
 $result = mysqli_query($conn, $query);
 $row = mysqli_fetch_assoc($result);
 ?>
 <!-- <bootstrap icons > -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<?php if ($row): ?>
 <section class="py-5 bg-light">
   <div class="card border-0 shadow-lg">
     <div class="row g-0">
@@ -35,11 +36,11 @@ $row = mysqli_fetch_assoc($result);
         </p>
       </div>
     </div>
-
-
-
-
-
-
-
 </section>
+<?php else: ?>
+<div class="container py-5">
+  <div class="alert alert-warning text-center">
+    Product not found.
+  </div>
+</div>
+<?php endif; ?>

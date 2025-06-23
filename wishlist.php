@@ -75,7 +75,7 @@ if (session_status() == PHP_SESSION_NONE) {
                     <div class="col-md-6 col-lg-6 col-xl-6">
                         <div class="card product-card h-100 border-0 shadow-sm hover-top">
                             <div class="badge bg-success position-absolute top-0 end-0 m-2">
-                                <?= htmlspecialchars($row['product_discount_percentage']) ?>% OFF
+                                <?= htmlspecialchars($row['discount_percentaged']) ?>% OFF
                             </div>
                             <div class="ps-4 py-3">
                                 <div class="d-flex align-items-center">
@@ -86,7 +86,7 @@ if (session_status() == PHP_SESSION_NONE) {
                             </div>
                             <div class="card-body d-flex flex-column shadow-sm">
                                 <div class="mb-2">
-                                    <a href="singleproduct.php?id=<?= $row['id'] ?>" class="text-decoration-none">
+                                    <a href="single-product.php?id=<?= $row['id'] ?>" class="text-decoration-none">
                                         <h5 class="card-title mb-1 text-center"><?= htmlspecialchars($row['name']) ?></h5>
                                     </a>
                                     <div class="d-flex text-center mb-2 ms-3">

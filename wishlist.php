@@ -127,7 +127,7 @@ if (session_status() == PHP_SESSION_NONE) {
                     <div class="col-md-6 col-lg-4 col-xl-3">
                         <div class="card product-card h-100 border-0 shadow-sm">
                             <?php if ($row['discount_percentaged'] > 0): ?>
-                                <span class="discount-badge bg-danger position-absolute top-0 start-0 m-2">
+                                <span class="badge bg-warning   position-absolute top-0 start-0  text-dark discount-badge">
                                     <?= htmlspecialchars($row['discount_percentaged']) ?>% OFF
                                 </span>
                             <?php endif; ?>

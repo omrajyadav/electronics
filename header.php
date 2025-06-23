@@ -79,11 +79,11 @@
                 <li class="nav-item active">
                   <a class="nav-link" href="index.php">Home</a>
                 </li>
-               <ul class="nav navbar-nav center_nav pull-right">
-                <li class="nav-item active">
-                  <a class="nav-link" href="shop.php">shop</a>
-                </li>
-                <!-- <li class="nav-item submenu dropdown">
+                <ul class="nav navbar-nav center_nav pull-right">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="shop.php">shop</a>
+                  </li>
+                  <!-- <li class="nav-item submenu dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                       aria-expanded="false">Blog</a>
                     <ul class="dropdown-menu">
@@ -95,34 +95,34 @@
                       </li>
                     </ul>
                   </li> -->
-                <li class="nav-item submenu dropdown">
-                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                    aria-expanded="false">Pages</a>
-                  <ul class="dropdown-menu">
-                    <li class="nav-item">
-                      <a class="nav-link" href="trake.php">Tracking</a>
-                    </li>
-                     <li class="nav-item">
-                      <a class="nav-link" href="category.php">Shop Category</a>
-                    </li>
-                    <!-- <li class="nav-item">
+                  <li class="nav-item submenu dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                      aria-haspopup="true" aria-expanded="false">Pages</a>
+                    <ul class="dropdown-menu">
+                      <li class="nav-item">
+                        <a class="nav-link" href="trake.php">Tracking</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="category.php">Shop Category</a>
+                      </li>
+                      <!-- <li class="nav-item">
                       <a class="nav-link" href="single-product.php">Product Details</a>
                     </li> -->
-                    <li class="nav-item">
-                      <a class="nav-link" href="checkout.php">Product Checkout</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="cart_add.php">Shopping Cart</a>
-                    </li>
-                    <!-- <li class="nav-item">
+                      <li class="nav-item">
+                        <a class="nav-link" href="checkout.php">Product Checkout</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="cart_add.php">Shopping Cart</a>
+                      </li>
+                      <!-- <li class="nav-item">
                         <a class="nav-link" href="elements.html">Elements</a>
                       </li> -->
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="contact.php">Contact</a>
-                </li>
-              </ul>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.php">Contact</a>
+                  </li>
+                </ul>
             </div>
 
             <div class="col-lg-5 pr-0">
@@ -143,18 +143,29 @@
                   </span>
                 </a>
 
-                <li class="nav-item">
-                  <a href="login.php" class="icons">
-                    <i class="ti-user" aria-hidden="true"></i>
-                  </a>
-                </li>
 
                 <li class="nav-item">
                   <a href="wishlist.php" class="icons">
                     <i class="ti-heart" aria-hidden="true"></i>
+                    <?php
+                    include "db_connection.php";
+                    $customer_id = isset($_SESSION['customer_id']) ? $_SESSION['customer_id'] : 0;
+                    $select = "SELECT count(*) as total_count FROM tbl_wishlist WHERE  wishlist_customer_id='$customer_id'";
+                    $findingtotal = mysqli_query($conn, $select);
+                    $test = mysqli_fetch_array($findingtotal);
+                    ?>
+                    <span class="badge text-dark border-dark rounded-circle" style="">
+                      <?= $test["total_count"] ?>
+                    </span>
                   </a>
                 </li>
-                 <li class="nav-item">
+
+                <li class="nav-item" class="mx-2;">
+                  <a href="login.php" class="icons">
+                    <i class="ti-user mx-3" aria-hidden="true" style="margin-top:20px;"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
                   <a href="order_hister.php" class="icons">
                     <i class="ti-heart" aria-hidden="true"></i>
                   </a>

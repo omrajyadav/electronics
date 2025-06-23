@@ -187,7 +187,7 @@ if (session_status() == PHP_SESSION_NONE) {
                 </div>
                 <h4 class="mb-3">Your wishlist is empty</h4>
                 <p class="text-muted mb-4">Looks like you haven't added any items to your wishlist yet.</p>
-                <a href="products.php" class="btn btn-primary px-4">
+                <a href="shop.php" class="btn btn-primary px-4">
                     <i class="fas fa-arrow-left me-2"></i>Continue Shopping
                 </a>
             </div>

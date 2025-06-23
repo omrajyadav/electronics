@@ -50,13 +50,13 @@ $result = mysqli_query($conn, $query);
                                         me-1"></i>
                                         <?= htmlspecialchars($row['order_m_status']) ?>
                                     </td>
-                                    <td><?= date('d M Y', strtotime($row['order_m_date'])) ?></td>
-                                    <td class="fw-bold">₹<?= number_format($row['order_m_total_price'], 2) ?></td>
-                                    <td><?= htmlspecialchars($row['order_m_payment_term']) ?></td>
+                                    <td><?= isset($row['order_m_date']) ? date('d M Y', strtotime($row['order_m_date'])) : '-' ?></td>
+                                    <td class="fw-bold">₹<?= isset($row['order_m_total_price']) && is_numeric($row['order_m_total_price']) ? number_format($row['order_m_total_price'], 2) : '0.00' ?></td>
+                                    <td><?= htmlspecialchars($row['order_m_payment_term'] ?? '-') ?></td>
                                     <td>
                                         <span class="badge 
-                                            <?= $row['order_m_payment_status'] == 'Paid' ? 'bg-success' : 'bg-warning text-dark' ?>">
-                                            <?= htmlspecialchars($row['order_m_payment_status']) ?>
+                                            <?= isset($row['order_m_payment_status']) && $row['order_m_payment_status'] == 'Paid' ? 'bg-success' : 'bg-warning text-dark' ?>">
+                                            <?= htmlspecialchars($row['order_m_payment_status'] ?? '-') ?>
                                         </span>
                                     </td>
                                     <td>

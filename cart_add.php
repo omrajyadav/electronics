@@ -55,7 +55,7 @@ include "db_connection.php";
                     <div class="card-body p-0">
                         <div class="table-responsive">
                             <table class="table align-middle mb-0">
-                                <thead class="bg-light">
+                                <thead class="bg-dark text-white">
                                     <tr>
                                         <th scope="col" class="ps-4">Product img</th>
                                         <th scope="col">Product name</th>

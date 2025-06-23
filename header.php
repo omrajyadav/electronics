@@ -79,23 +79,9 @@
                 <li class="nav-item active">
                   <a class="nav-link" href="index.php">Home</a>
                 </li>
-                <li class="nav-item submenu dropdown">
-                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                    aria-expanded="false">Shop</a>
-                  <ul class="dropdown-menu">
-                    <li class="nav-item">
-                      <a class="nav-link" href="category.php">Shop Category</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="single-product.php">Product Details</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="checkout.php">Product Checkout</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="cart_add.php">Shopping Cart</a>
-                    </li>
-                  </ul>
+               <ul class="nav navbar-nav center_nav pull-right">
+                <li class="nav-item active">
+                  <a class="nav-link" href="shop.php">shop</a>
                 </li>
                 <!-- <li class="nav-item submenu dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
@@ -115,6 +101,18 @@
                   <ul class="dropdown-menu">
                     <li class="nav-item">
                       <a class="nav-link" href="trake.php">Tracking</a>
+                    </li>
+                     <li class="nav-item">
+                      <a class="nav-link" href="category.php">Shop Category</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="single-product.php">Product Details</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="checkout.php">Product Checkout</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="cart_add.php">Shopping Cart</a>
                     </li>
                     <!-- <li class="nav-item">
                         <a class="nav-link" href="elements.html">Elements</a>

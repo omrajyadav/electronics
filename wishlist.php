@@ -72,6 +72,7 @@ if (session_status() == PHP_SESSION_NONE) {
             if ($result && mysqli_num_rows($result) > 0) {
                 while ($row = mysqli_fetch_assoc($result)) {
                     ?>
+                    
                     <div class="col-md-6 col-lg-6 col-xl-6">
                         <div class="card product-card h-100 border-0 shadow-sm hover-top">
                             <div class="badge bg-success position-absolute top-0 end-0 m-2">

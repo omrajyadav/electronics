@@ -105,9 +105,9 @@
                      <li class="nav-item">
                       <a class="nav-link" href="category.php">Shop Category</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                       <a class="nav-link" href="single-product.php">Product Details</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                       <a class="nav-link" href="checkout.php">Product Checkout</a>
                     </li>

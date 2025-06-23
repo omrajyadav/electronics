@@ -479,7 +479,7 @@ include 'db_connection.php';
                                      alt="<?= htmlspecialchars($row["name"]) ?>">
                                 <div class="card-img-overlay d-flex align-items-center justify-content-center overlay-bg">
                                     <div class="overlay-content text-center">
-                                        <a href="single-product.php?id=<?= $id ?>" class="btn btn-dark btn-sm stretched-link">Quick View</a>
+                                        <a href="" class="btn btn-dark btn-sm stretched-link">Quick View</a>
                                     </div>
                                 </div>
                                 

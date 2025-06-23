@@ -39,7 +39,6 @@ if (isset($_POST["id"])) {
         <div class="page_link">
           <a href="index.php">Home</a>
           <a href="product_list.php">Products</a>
-          <a href="product_details.php?id=<?= $id ?>">Details</a>
         </div>
       </div>
     </div>

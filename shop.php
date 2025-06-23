@@ -45,6 +45,7 @@ include "db_connection.php";
                             while ($cat = mysqli_fetch_assoc($cat_result)) {
                                 $active = (isset($_GET['id']) && $_GET['id'] == $cat['id']) ? 'active' : '';
                                 echo '<a href="shop.php?id=' . $cat['id'] . '" class="btn btn-outline-primary rounded-pill px-4 ' . $active . '">' . $cat['name'] . '</a>';
+                                
                             }
                             ?>
                         </div>

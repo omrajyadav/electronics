@@ -496,7 +496,7 @@ include 'db_connection.php';
                                 <p class="card-text text-muted small mb-2"><?= substr(htmlspecialchars($row["description"]), 0, 60) ?>...</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     
-                                    <a href="cart.php?add=<?= $id ?>" class="btn btn-sm btn-primary rounded-pill px-3">
+                                    <a href="cart_add.php?add=<?= $id ?>" class="btn btn-sm btn-primary rounded-pill px-3">
                                         <i class="bi bi-cart-plus me-1"></i> Add
                                     </a>
                                 </div>
@@ -519,7 +519,7 @@ include 'db_connection.php';
         </div>
         
         <div class="text-center mt-5">
-            <a href="products.php" class="btn btn-outline-primary px-4">View All Products</a>
+            <a href="shop.php" class="btn btn-outline-primary px-4">View All Products</a>
         </div>
     </div>
 </section>

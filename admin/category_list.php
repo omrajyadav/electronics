@@ -41,7 +41,7 @@ include('sidebar.php');
                     while ($row = mysqli_fetch_array($result)) {
                         ?>
                         <tr>
-                            <td><?php echo $row['id']; ?></td>
+                            <td><?php echo $row['name']; ?></td>
                             <td><?php echo $row['name']; ?></td>
                             <td><img src="uploads/categoryimg/<?php echo $row['image']; ?>" width="100" height="100"></td>
                             <td><?php echo $row['description']; ?></td>

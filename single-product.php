@@ -94,7 +94,7 @@ if (isset($_POST["id"])) {
           <ul class="list">
             <li>
               <a class="active" href="#">
-                <span>Category</span> : <?= htmlspecialchars($row["category"]) ?>
+                <span>Category</span> : <?= htmlspecialchars($row["name"]) ?>
               </a>
             </li>
             <li>

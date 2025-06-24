@@ -1,7 +1,6 @@
 <?php
 include "db_connection.php";
 include "header.php";
-
 $order_m_id = isset($_SESSION['order_m_id']) ? $_SESSION['order_m_id'] : null;
 
 $query = "SELECT * FROM `tbl_order_master` ORDER BY order_m_date DESC";

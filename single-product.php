@@ -1,6 +1,6 @@
 <?php
-include "db_connection.php";
 include "header.php";
+include "db_connection.php";
 
 if (isset($_POST["id"])) {
     $id = $_POST["id"];
@@ -34,7 +34,7 @@ if (isset($_POST["id"])) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
         :root {
-            --primary-color: #2563eb;
+            --primary-color:rgb(5, 11, 22);
             --secondary-color: #1e40af;
             --accent-color: #3b82f6;
             --dark-color: #1e293b;

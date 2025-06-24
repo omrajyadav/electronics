@@ -1,88 +1,105 @@
- <footer class="footer-area section_gap">
+<footer class="footer-area bg-dark text-white pt-5">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-2 col-md-6 single-footer-widget">
-          <h4>Top Products</h4>
-          <ul>
-            <li><a href="#">Managed Website</a></li>
-            <li><a href="#">Manage Reputation</a></li>
-            <li><a href="#">Power Tools</a></li>
-            <li><a href="#">Marketing Service</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-2 col-md-6 single-footer-widget">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="#">Jobs</a></li>
-            <li><a href="#">Brand Assets</a></li>
-            <li><a href="#">Investor Relations</a></li>
-            <li><a href="#">Terms of Service</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-2 col-md-6 single-footer-widget">
-          <h4>Features</h4>
-          <ul>
-            <li><a href="#">Jobs</a></li>
-            <li><a href="#">Brand Assets</a></li>
-            <li><a href="#">Investor Relations</a></li>
-            <li><a href="#">Terms of Service</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-2 col-md-6 single-footer-widget">
-          <h4>Resources</h4>
-          <ul>
-            <li><a href="#">Guides</a></li>
-            <li><a href="#">Research</a></li>
-            <li><a href="#">Experts</a></li>
-            <li><a href="#">Agencies</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-4 col-md-6 single-footer-widget">
-          <h4>Newsletter</h4>
-          <p>You can trust us. we only send promo offers,</p>
-          <div class="form-wrap" id="mc_embed_signup">
-            <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-              method="get" class="form-inline">
-              <input class="form-control" name="EMAIL" placeholder="Your Email Address" onfocus="this.placeholder = ''"
-                onblur="this.placeholder = 'Your Email Address '" required="" type="email">
-              <button class="click-btn btn btn-default">Subscribe</button>
-              <div style="position: absolute; left: -5000px;">
-                <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-              </div>
+        <div class="row g-4">
+            <!-- About Column -->
+            <div class="col-lg-4 col-md-6">
+                <div class="single-footer-widget">
+                    <a href="index.html" class="d-block mb-3">
+                        <img src="img/logo-white.png" alt="Company Logo" style="height: 40px;">
+                    </a>
+                    <p class="mb-4 text-white-50">Eiser is a premium e-commerce platform offering high-quality products with exceptional customer service.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-3 hover-primary"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3 hover-primary"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3 hover-primary"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3 hover-primary"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
 
-              <div class="info"></div>
-            </form>
-          </div>
+            <!-- Quick Links -->
+            <div class="col-lg-2 col-md-6">
+                <div class="single-footer-widget">
+                    <h4 class="mb-4 text-white">Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.php" class="text-white-50 hover-white">Home</a></li>
+                        <li class="mb-2"><a href="shop.php" class="text-white-50 hover-white">Shop</a></li>
+                        <li class="mb-2"><a href="about.php" class="text-white-50 hover-white">About Us</a></li>
+                        <li class="mb-2"><a href="contact.php" class="text-white-50 hover-white">Contact</a></li>
+                        <li class="mb-2"><a href="blog.php" class="text-white-50 hover-white">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Customer Service -->
+            <div class="col-lg-2 col-md-6">
+                <div class="single-footer-widget">
+                    <h4 class="mb-4 text-white">Customer Service</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="faq.php" class="text-white-50 hover-white">FAQs</a></li>
+                        <li class="mb-2"><a href="shipping.php" class="text-white-50 hover-white">Shipping Policy</a></li>
+                        <li class="mb-2"><a href="returns.php" class="text-white-50 hover-white">Returns & Refunds</a></li>
+                        <li class="mb-2"><a href="privacy.php" class="text-white-50 hover-white">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="terms.php" class="text-white-50 hover-white">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-lg-4 col-md-6">
+                <div class="single-footer-widget">
+                    <h4 class="mb-4 text-white">Contact Us</h4>
+                    <ul class="list-unstyled contact-info">
+                        <li class="mb-3 d-flex align-items-center">
+                            <i class="fas fa-map-marker-alt me-3 text-primary"></i>
+                            <span class="text-white-50">123 Street, City, Country</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-center">
+                            <i class="fas fa-phone-alt me-3 text-primary"></i>
+                            <span class="text-white-50">+01 234 567 890</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-center">
+                            <i class="fas fa-envelope me-3 text-primary"></i>
+                            <span class="text-white-50">info@eiser.com</span>
+                        </li>
+                    </ul>
+                    
+                    <!-- Newsletter -->
+                    <div class="newsletter mt-4">
+                        <h5 class="mb-3 text-white">Newsletter</h5>
+                        <p class="small text-white-50 mb-3">Subscribe for updates and special offers</p>
+                        <form class="d-flex">
+                            <input type="email" class="form-control rounded-0 bg-transparent text-white border-secondary" placeholder="Your Email" required>
+                            <button type="submit" class="btn btn-primary rounded-0 px-3">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="footer-bottom row align-items-center">
-        <p class="footer-text m-0 col-lg-8 col-md-12"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-        <div class="col-lg-4 col-md-12 footer-social">
-          <a href="#"><i class="fa fa-facebook"></i></a>
-          <a href="#"><i class="fa fa-twitter"></i></a>
-          <a href="#"><i class="fa fa-dribbble"></i></a>
-          <a href="#"><i class="fa fa-behance"></i></a>
+
+        <div class="footer-bottom mt-5 pt-4 border-top border-secondary">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <p class="m-0 small text-white-50">
+                        &copy; <script>document.write(new Date().getFullYear());</script> Eiser. All rights reserved.
+                    </p>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-visa me-2 text-white-50 hover-white"></i>
+                        <i class="fab fa-cc-mastercard me-2 text-white-50 hover-white"></i>
+                        <i class="fab fa-cc-paypal me-2 text-white-50 hover-white"></i>
+                        <i class="fab fa-cc-amex text-white-50 hover-white"></i>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </footer>
-  <!--================ End footer Area  =================-->
+</footer>
 
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="js/jquery-3.2.1.min.js"></script>
-  <script src="js/popper.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/stellar.js"></script>
-  <script src="vendors/lightbox/simpleLightbox.min.js"></script>
-  <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
-  <script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
-  <script src="vendors/isotope/isotope-min.js"></script>
-  <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-  <script src="js/jquery.ajaxchimp.min.js"></script>
-  <script src="vendors/counter-up/jquery.waypoints.min.js"></script>
-  <script src="vendors/counter-up/jquery.counterup.js"></script>
-  <script src="js/mail-script.js"></script>
-  <script src="js/theme.js"></script>
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="js/main.js"></script>

@@ -1,180 +1,218 @@
 <head>
-  <?php
-  session_start()
-    ?>
+  <?php session_start(); ?>
   <!-- Required meta tags -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <link rel="icon" href="img/favicon.png" type="image/png" />
-  <title>Eiser ecommerce</title>
+  <title>Eiser Ecommerce</title>
+  
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="css/bootstrap.css" />
-  <link rel="stylesheet" href="vendors/linericon/style.css" />
-  <link rel="stylesheet" href="css/font-awesome.min.css" />
-  <link rel="stylesheet" href="css/themify-icons.css" />
-  <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css" />
-  <link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css" />
-  <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css" />
-  <link rel="stylesheet" href="vendors/animate-css/animate.css" />
-  <link rel="stylesheet" href="vendors/jquery-ui/jquery-ui.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <!-- main css -->
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
+  
+  <!-- Custom CSS -->
+  <style>
+    :root {
+      --primary-color: #2a2a2a;
+      --accent-color: #d4a373;
+      --light-color: #f8f9fa;
+      --dark-color: #212529;
+    }
+    
+    .top-bar {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 8px 0;
+      font-size: 0.9rem;
+    }
+    
+    .top-bar a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    
+    .top-bar a:hover {
+      color: white;
+    }
+    
+    .navbar {
+      padding: 15px 0;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    }
+    
+    .navbar-brand img {
+      height: 40px;
+    }
+    
+    .nav-link {
+      color: var(--primary-color);
+      font-weight: 500;
+      padding: 8px 15px !important;
+      transition: all 0.3s;
+    }
+    
+    .nav-link:hover, .nav-link.active {
+      color: var(--accent-color);
+    }
+    
+    .dropdown-menu {
+      border: none;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .dropdown-item {
+      padding: 8px 20px;
+    }
+    
+    .dropdown-item:hover {
+      background-color: rgba(212, 163, 115, 0.1);
+      color: var(--accent-color);
+    }
+    
+    .icon-badge {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      width: 20px;
+      height: 20px;
+      background-color: var(--accent-color);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: bold;
+    }
+    
+    .nav-icon {
+      font-size: 1.3rem;
+      color: var(--primary-color);
+      position: relative;
+      margin: 0 10px;
+      transition: color 0.3s;
+    }
+    
+    .nav-icon:hover {
+      color: var(--accent-color);
+    }
+    
+    @media (max-width: 991.98px) {
+      .navbar-collapse {
+        background-color: white;
+        padding: 20px;
+        margin-top: 15px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      }
+      
+      .nav-item {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
 </head>
 
-<header class="header_area">
-  <div class="top_menu">
+<header>
+  <!-- Top Bar -->
+  <div class="top-bar">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-7">
-          <div class="float-left">
-            <p>Phone: +01 256 25 235</p>
-            <p>email: info@eiser.com</p>
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <div class="d-flex gap-4">
+            <span><i class="fas fa-phone-alt me-2"></i> +01 256 25 235</span>
+            <span><i class="fas fa-envelope me-2"></i> info@eiser.com</span>
           </div>
         </div>
-        <div class="col-lg-5">
-          <div class="float-right">
-            <ul class="right_side">
-              <li>
-                <a href="cart.html">
-                  gift card
-                </a>
-              </li>
-              <li>
-                <a href="tracking.html">
-                  track order
-                </a>
-              </li>
-              <li>
-                <a href="contact.html">
-                  Contact Us
-                </a>
-              </li>
-            </ul>
+        <div class="col-md-6 text-md-end">
+          <div class="d-flex gap-4 justify-content-md-end">
+            <a href="cart.html"><i class="fas fa-gift me-2"></i> Gift Card</a>
+            <a href="tracking.html"><i class="fas fa-truck me-2"></i> Track Order</a>
+            <a href="contact.html"><i class="fas fa-phone me-2"></i> Contact Us</a>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="main_menu">
+
+  <!-- Main Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
     <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-light w-100">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <a class="navbar-brand logo_h" href="index.html">
-          <img src="img/logo.png" alt="" />
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse offset w-100" id="navbarSupportedContent">
-          <div class="row w-100 mr-0">
-            <div class="col-lg-7 pr-0">
-              <ul class="nav navbar-nav center_nav pull-right">
-                <li class="nav-item active">
-                  <a class="nav-link" href="index.php">Home</a>
-                </li>
-                <ul class="nav navbar-nav center_nav pull-right">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="shop.php">shop</a>
-                  </li>
-                  <!-- <li class="nav-item submenu dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                      aria-expanded="false">Blog</a>
-                    <ul class="dropdown-menu">
-                      <li class="nav-item">
-                        <a class="nav-link" href="blog.html">Blog</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="single-blog.html">Blog Details</a>
-                      </li>
-                    </ul>
-                  </li> -->
-                  <li class="nav-item submenu dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
-                      aria-haspopup="true" aria-expanded="false">Pages</a>
-                    <ul class="dropdown-menu">
-                      <li class="nav-item">
-                        <a class="nav-link" href="trake.php">Tracking</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="category.php">Shop Category</a>
-                      </li>
-                      <!-- <li class="nav-item">
-                      <a class="nav-link" href="single-product.php">Product Details</a>
-                    </li> -->
-                      <li class="nav-item">
-                        <a class="nav-link" href="checkout.php">Product Checkout</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="cart_add.php">Shopping Cart</a>
-                      </li>
-                      <!-- <li class="nav-item">
-                        <a class="nav-link" href="elements.html">Elements</a>
-                      </li> -->
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="contact.php">Contact</a>
-                  </li>
-                </ul>
-            </div>
-
-            <div class="col-lg-5 pr-0">
-              <ul class="nav navbar-nav navbar-right right_nav pull-right">
-
-
-                <a href="cart_add.php" class="position-relative me-4 my-auto">
-                  <i class="fa fa-shopping-cart fa-2x"></i>
-                  <?php
-                  include_once "db_connection.php";
-                  $customer_id = isset($_SESSION['customer_id']) ? $_SESSION['customer_id'] : '0';
-                  $select = "SELECT COALESCE(SUM(cart_qty), 0) as total_count FROM tbl_cart WHERE cart_customer_id='$customer_id'";
-                  $findingtotal = mysqli_query($conn, $select);
-                  $test = mysqli_fetch_array($findingtotal);
-                  ?>
-                  <span class="badge text-dark border-dark rounded-circle" style="">
-                    <?= $test["total_count"] ?>
-                  </span>
-                </a>
-
-
-                <li class="nav-item">
-                  <a href="wishlist.php" class="icons">
-                    <i class="ti-heart" aria-hidden="true"></i>
-                    <?php
-                    include "db_connection.php";
-                    $customer_id = isset($_SESSION['customer_id']) ? $_SESSION['customer_id'] : 0;
-                    $select = "SELECT count(*) as total_count FROM tbl_wishlist WHERE  wishlist_customer_id='$customer_id'";
-                    $findingtotal = mysqli_query($conn, $select);
-                    $test = mysqli_fetch_array($findingtotal);
-                    ?>
-                    <span class="badge text-dark border-dark rounded-circle" style="">
-                      <?= $test["total_count"] ?>
-                    </span>
-                  </a>
-                </li>
-
-                <li class="nav-item" class="mx-2;">
-                  <a href="login.php" class="icons">
-                    <i class="ti-user mx-3" aria-hidden="true" style="margin-top:20px;"></i>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="order_hister.php" class="icons">
-                    <i class="ti-heart" aria-hidden="true"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logo.png" alt="Eiser Logo" class="img-fluid">
+      </a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.php">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="shop.php">Shop</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" 
+               data-bs-toggle="dropdown" aria-expanded="false">
+              Pages
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="pagesDropdown">
+              <li><a class="dropdown-item" href="trake.php">Tracking</a></li>
+              <li><a class="dropdown-item" href="category.php">Shop Category</a></li>
+              <li><a class="dropdown-item" href="checkout.php">Product Checkout</a></li>
+              <li><a class="dropdown-item" href="cart_add.php">Shopping Cart</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.php">Contact</a>
+          </li>
+        </ul>
+        
+        <div class="d-flex align-items-center">
+          <a href="cart_add.php" class="nav-icon position-relative">
+            <i class="fas fa-shopping-cart"></i>
+            <?php
+            include_once "db_connection.php";
+            $customer_id = isset($_SESSION['customer_id']) ? $_SESSION['customer_id'] : '0';
+            $select = "SELECT COALESCE(SUM(cart_qty), 0) as total_count FROM tbl_cart WHERE cart_customer_id='$customer_id'";
+            $findingtotal = mysqli_query($conn, $select);
+            $test = mysqli_fetch_array($findingtotal);
+            if ($test["total_count"] > 0): ?>
+              <span class="icon-badge"><?= $test["total_count"] ?></span>
+            <?php endif; ?>
+          </a>
+          
+          <a href="wishlist.php" class="nav-icon position-relative">
+            <i class="fas fa-heart"></i>
+            <?php
+            include "db_connection.php";
+            $customer_id = isset($_SESSION['customer_id']) ? $_SESSION['customer_id'] : 0;
+            $select = "SELECT count(*) as total_count FROM tbl_wishlist WHERE wishlist_customer_id='$customer_id'";
+            $findingtotal = mysqli_query($conn, $select);
+            $test = mysqli_fetch_array($findingtotal);
+            if ($test["total_count"] > 0): ?>
+              <span class="icon-badge"><?= $test["total_count"] ?></span>
+            <?php endif; ?>
+          </a>
+          
+          <a href="login.php" class="nav-icon">
+            <i class="fas fa-user"></i>
+          </a>
+          
+          <a href="order_hister.php" class="nav-icon">
+            <i class="fas fa-history"></i>
+          </a>
         </div>
-      </nav>
+      </div>
     </div>
-  </div>
+  </nav>
 </header>
+
+<!-- Bootstrap JS Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

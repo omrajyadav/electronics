@@ -279,7 +279,7 @@ if (isset($_POST["id"])) {
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                    <li class="breadcrumb-item"><a href="product_list.php">Products</a></li>
+                    <li class="breadcrumb-item"><a href="shop.php">shop</a></li>
                     <li class="breadcrumb-item active" aria-current="page"><?= htmlspecialchars($row["name"]) ?></li>
                 </ol>
             </nav>

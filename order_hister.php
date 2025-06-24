@@ -60,7 +60,7 @@ $result = mysqli_query($conn, $query);
                                         </span>
                                     </td>
                                     <td>
-                                        <a href="order_detail.php?order_id=<?= $row['order_m_id'] ?>" 
+                                        <a href="order.detail.php?order_id=<?= $row['order_m_id'] ?>" 
                                            class="btn btn-sm btn-outline-primary" 
                                            title="View Details">
                                             <i class="fas fa-eye me-1"></i> Details

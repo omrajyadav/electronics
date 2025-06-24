@@ -91,7 +91,7 @@ include "db_connection.php";
                                             alt="<?= htmlspecialchars($row["name"]) ?>">
 
                                         <?php if ($row["discount_percentaged"] > 0): ?>
-                                            <span class="badge bg-warning position-absolute top-0 start-0 ">
+                                            <span class="badge bg-warning position-absolute top-0 start-0 text-dark">
                                                 -<?= $row["discount_percentaged"] ?>%
                                             </span>
                                         <?php endif; ?>

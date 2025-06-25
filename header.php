@@ -131,7 +131,7 @@
           <div class="d-flex gap-4 justify-content-md-end">
             <a href="cart.html"><i class="fas fa-gift me-2"></i> Gift Card</a>
             <a href="trake.php"><i class="fas fa-truck me-2"></i> Track Order</a>
-            <a href="contact.html"><i class="fas fa-phone me-2"></i> Contact Us</a>
+            <a href="contact.php"><i class="fas fa-phone me-2"></i> Contact Us</a>
           </div>
         </div>
       </div>

@@ -4,10 +4,10 @@
             <!-- About Column -->
             <div class="col-lg-4 col-md-6">
                 <div class="single-footer-widget">
-                    <a href="index.html" class="d-block mb-3">
-                        <img src="img/logo-white.png" alt="Company Logo" style="height: 40px;">
+                    <a href="index.php" class="d-block mb-3">
                     </a>
-                    <p class="mb-4 text-white-50">Eiser is a premium e-commerce platform offering high-quality products with exceptional customer service.</p>
+                    <p class="mb-4 text-white-50">Eiser is a premium e-commerce platform offering high-quality products
+                        with exceptional customer service.</p>
                     <div class="social-icons">
                         <a href="#" class="text-white me-3 hover-primary"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="text-white me-3 hover-primary"><i class="fab fa-twitter"></i></a>
@@ -37,8 +37,10 @@
                     <h4 class="mb-4 text-white">Customer Service</h4>
                     <ul class="list-unstyled">
                         <li class="mb-2"><a href="faq.php" class="text-white-50 hover-white">FAQs</a></li>
-                        <li class="mb-2"><a href="shipping.php" class="text-white-50 hover-white">Shipping Policy</a></li>
-                        <li class="mb-2"><a href="returns.php" class="text-white-50 hover-white">Returns & Refunds</a></li>
+                        <li class="mb-2"><a href="shipping.php" class="text-white-50 hover-white">Shipping Policy</a>
+                        </li>
+                        <li class="mb-2"><a href="returns.php" class="text-white-50 hover-white">Returns & Refunds</a>
+                        </li>
                         <li class="mb-2"><a href="privacy.php" class="text-white-50 hover-white">Privacy Policy</a></li>
                         <li class="mb-2"><a href="terms.php" class="text-white-50 hover-white">Terms of Service</a></li>
                     </ul>
@@ -63,13 +65,15 @@
                             <span class="text-white-50">info@eiser.com</span>
                         </li>
                     </ul>
-                    
+
                     <!-- Newsletter -->
                     <div class="newsletter mt-4">
                         <h5 class="mb-3 text-white">Newsletter</h5>
                         <p class="small text-white-50 mb-3">Subscribe for updates and special offers</p>
                         <form class="d-flex">
-                            <input type="email" class="form-control rounded-0 bg-transparent text-white border-secondary" placeholder="Your Email" required>
+                            <input type="email"
+                                class="form-control rounded-0 bg-transparent text-white border-secondary"
+                                placeholder="Your Email" required>
                             <button type="submit" class="btn btn-primary rounded-0 px-3">
                                 <i class="fas fa-paper-plane"></i>
                             </button>
@@ -83,7 +87,8 @@
             <div class="row align-items-center">
                 <div class="col-md-8">
                     <p class="m-0 small text-white-50">
-                        &copy; <script>document.write(new Date().getFullYear());</script> Eiser. All rights reserved.
+                        &copy;
+                        <script>document.write(new Date().getFullYear());</script> Eiser. All rights reserved.
                     </p>
                 </div>
                 <div class="col-md-4 text-md-end">

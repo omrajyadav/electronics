@@ -244,7 +244,7 @@ $items_result = mysqli_query($conn, $items_query);
         
         <div class="no-print text-center mt-4">
             <p>Thank you for shopping with GreenHarvest Organic Farms!</p>
-            <a href="product.php" class="btn btn-success">
+            <a href="shop.php" class="btn btn-success">
                 <i class="fas fa-product-add"></i> back add to cart
             </a>
         </div>

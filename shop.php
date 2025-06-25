@@ -150,9 +150,9 @@ include "db_connection.php";
 
                                     <div class="card-body">
                                         <h5 class="card-title fw-bold"><?= htmlspecialchars($row["name"]) ?></h5>
-                                        <p class="card-text text-muted small mb-2 text-truncate-2" style="height: 2.5rem;">
-                                            <!-- <?= htmlspecialchars($row["description"]) ?> -->
-                                        </p>
+                                        <!-- <p class="card-text text-muted small mb-2 text-truncate-2" style="height: 2.5rem;">
+                                            <?= htmlspecialchars($row["description"]) ?>
+                                        </p> -->
 
                                         <div class="d-flex align-items-center mb-3">
                                             <?php if ($row["discount_percentaged"] > 0): ?>

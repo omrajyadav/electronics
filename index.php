@@ -344,7 +344,7 @@ include 'db_connection.php';
                                 </div>
                                 <div class="card-body text-center">
                                     <h5 class="card-title"><?= htmlspecialchars($row["name"]) ?></h5>
-                                    <p class="card-text text-muted small mb-3"><?= htmlspecialchars($row["description"]) ?></p>
+                                    <!-- <p class="card-text text-muted small mb-3"><?= htmlspecialchars($row["description"]) ?></p> -->
                                     <div class="mb-3">
                                         <span class="h5 text-dark">₹<?= number_format($row['sale_price'], 2) ?></span>
                                         <?php if ($discount > 0): ?>

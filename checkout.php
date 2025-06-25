@@ -157,20 +157,20 @@ $total = $subtotal + $shipping + $tax;
                         <div class="mb-3">
                             <div class="d-flex justify-content-between mb-2">
                                 <span>Subtotal</span>
-                                <span>₹<?= number_format($subtotal, 2) ?></span>
+                                <span>₹<?= number_format($subtotal, 0.01) ?></span>
                             </div>
                             <div class="d-flex justify-content-between mb-2">
                                 <span>Shipping</span>
-                                <span>₹<?= number_format($shipping, 2) ?></span>
+                                <span>₹<?= number_format($shipping, 0.01) ?></span>
                             </div>
                             <div class="d-flex justify-content-between mb-3">
-                                <span>Tax (18%)</span>
-                                <span>₹<?= number_format($tax, 2) ?></span>
+                                <span>Tax</span>
+                                <span>₹<?= number_format($tax, 0.01) ?></span>
                             </div>
                             <hr>
                             <div class="d-flex justify-content-between mb-3">
                                 <span class="fw-bold">Total</span>
-                                <span class="fw-bold text-primary fs-5">₹<?= number_format($total, 2) ?></span>
+                                <span class="fw-bold text-primary fs-5">₹<?= number_format($total, 0.01) ?></span>
                             </div>
                         </div>
                         

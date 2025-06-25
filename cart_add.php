@@ -162,17 +162,17 @@ include "db_connection.php";
                         </div>
                         <div class="d-flex justify-content-between mb-2">
                             <span>Shipping</span>
-                            <span class="fw-semibold">₹<?= number_format(50, 2) ?></span>
+                            <span class="fw-semibold">₹<?= number_format(10, 2) ?></span>
                         </div>
                         <div class="d-flex justify-content-between mb-3">
                             <span>Tax</span>
-                            <span class="fw-semibold">₹<?= number_format($subtotal * 0.18, 2) ?></span>
+                            <span class="fw-semibold">₹<?= number_format($subtotal * 0.01, 2) ?></span>
                         </div>
                         <hr>
                         <div class="d-flex justify-content-between mb-3">
                             <span class="fw-bold">Total</span>
                             <span class="fw-bold text-primary fs-5">
-                                ₹<?= number_format($subtotal + 50 + ($subtotal * 0.18), 2) ?>
+                                ₹<?= number_format($subtotal + 10 + ($subtotal * 0.01), 2) ?>
                             </span>
                         </div>
                         <div class="d-grid gap-2">

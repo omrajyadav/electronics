@@ -4,7 +4,7 @@ include "db_connection.php";
 ?>
 <div class="form-inline mb-3">
     <div class="input-group" data-widget="search">
-        <form ">
+        <form>
             <input class="form-control" name="name" value="<?= isset($_GET["name"]) ? $_GET["name"] : "" ?>
            " type="search" placeholder="search">
         </form>

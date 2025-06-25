@@ -24,47 +24,52 @@ include 'db_connection.php';
             --bs-body-font-family: 'Manrope', sans-serif;
             --bs-heading-font-family: 'Marcellus', serif;
         }
-        
+
         body {
             font-family: var(--bs-body-font-family);
             color: var(--bs-dark);
             overflow-x: hidden;
         }
-        
-        h1, h2, h3, h4, h5, h6 {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-family: var(--bs-heading-font-family);
             letter-spacing: -0.5px;
         }
-        
+
         .btn-accent {
             background-color: var(--bs-accent);
             border-color: var(--bs-accent);
             color: white;
         }
-        
+
         .btn-accent:hover {
             background-color: transparent;
             color: var(--bs-accent);
             border-color: var(--bs-accent);
         }
-        
+
         .hero-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), 
-                        url('uploads/categoryimg/img2.jpg') no-repeat center center;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+                url('uploads/categoryimg/img2.jpg') no-repeat center center;
             background-size: cover;
             min-height: 90vh;
         }
-        
+
         .feature-card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             border: 1px solid rgba(0, 0, 0, 0.05);
         }
-        
+
         .feature-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
-        
+
         .feature-icon {
             width: 60px;
             height: 60px;
@@ -77,29 +82,32 @@ include 'db_connection.php';
             background-color: rgba(212, 163, 115, 0.1);
             border-radius: 50%;
         }
-        
-        .category-card, .product-card {
+
+        .category-card,
+        .product-card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             overflow: hidden;
         }
-        
-        .category-card:hover, .product-card:hover {
+
+        .category-card:hover,
+        .product-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
-        
+
         /* Reduced category image size */
         .category-img {
             transition: transform 0.5s ease;
-            height: 200px; /* Reduced from 250px */
+            height: 200px;
+            /* Reduced from 250px */
             object-fit: cover;
             border-radius: 10px;
         }
-        
+
         .category-card:hover .category-img {
             transform: scale(1.05);
         }
-        
+
         .product-img-container {
             height: 220px;
             background-color: var(--bs-light);
@@ -107,7 +115,7 @@ include 'db_connection.php';
             align-items: center;
             justify-content: center;
         }
-        
+
         .product-img {
             max-height: 100%;
             max-width: 100%;
@@ -115,18 +123,18 @@ include 'db_connection.php';
             padding: 20px;
             transition: transform 0.5s ease;
         }
-        
+
         .product-card:hover .product-img {
             transform: scale(1.05);
         }
-        
+
         .product-badge {
             position: absolute;
             top: 15px;
             right: 15px;
             z-index: 2;
         }
-        
+
         .product-actions {
             position: absolute;
             bottom: 20px;
@@ -137,30 +145,30 @@ include 'db_connection.php';
             opacity: 0;
             transition: opacity 0.3s ease;
         }
-        
+
         .product-card:hover .product-actions {
             opacity: 1;
         }
-        
+
         .newsletter-section {
             background-color: var(--bs-dark);
             color: white;
         }
-        
+
         .newsletter-form .form-control {
             border-radius: 50px 0 0 50px;
             border-right: none;
         }
-        
+
         .newsletter-form .btn {
             border-radius: 0 50px 50px 0;
         }
-        
+
         .section-title {
             position: relative;
             padding-bottom: 15px;
         }
-        
+
         .section-title:after {
             content: '';
             position: absolute;
@@ -171,14 +179,14 @@ include 'db_connection.php';
             height: 3px;
             background-color: var(--bs-accent);
         }
-        
+
         /* Responsive adjustments for smaller category images */
         @media (max-width: 768px) {
             .category-img {
                 height: 150px;
             }
         }
-        
+
         @media (max-width: 576px) {
             .category-img {
                 height: 120px;
@@ -195,7 +203,8 @@ include 'db_connection.php';
                 <div class="col-lg-6">
                     <div class="text-white p-4 bg-dark bg-opacity-50 rounded">
                         <h1 class="display-4 fw-bold mb-4">Timeless Style, Modern Sophistication</h1>
-                        <p class="lead mb-4">Discover thoughtfully designed pieces that blend quality craftsmanship with contemporary aesthetics</p>
+                        <p class="lead mb-4">Discover thoughtfully designed pieces that blend quality craftsmanship with
+                            contemporary aesthetics</p>
                         <div class="d-flex flex-wrap gap-3">
                             <a href="shop.php" class="btn btn-accent btn-lg px-4">Shop Now</a>
                             <a href="#featured" class="btn btn-outline-light btn-lg px-4">Explore Collections</a>
@@ -255,7 +264,7 @@ include 'db_connection.php';
         <div class="container">
             <h2 class="text-center section-title mb-4">Our Collections</h2>
             <p class="text-center text-muted mb-5">Carefully curated for the modern individual</p>
-            
+
             <div class="row g-4">
                 <?php
                 $query = "SELECT * FROM tbl_category LIMIT 6";
@@ -267,10 +276,10 @@ include 'db_connection.php';
                         <div class="col-md-6 col-lg-4">
                             <div class="category-card card h-100 border-0">
                                 <div class="position-relative overflow-hidden">
-                                    <img src="./admin/uploads/categoryimg/<?= htmlspecialchars($row["image"]) ?>" 
-                                         class="category-img w-100" 
-                                         alt="<?= htmlspecialchars($row["name"]) ?>">
-                                    <div class="card-img-overlay d-flex align-items-center justify-content-center bg-dark bg-opacity-30 opacity-0 hover-opacity-100 transition">
+                                    <img src="./admin/uploads/categoryimg/<?= htmlspecialchars($row["image"]) ?>"
+                                        class="category-img w-100" alt="<?= htmlspecialchars($row["name"]) ?>">
+                                    <div
+                                        class="card-img-overlay d-flex align-items-center justify-content-center bg-dark bg-opacity-30 opacity-0 hover-opacity-100 transition">
                                         <a href="shop.php?id=<?= $id ?>" class="btn btn-accent">View Collection</a>
                                     </div>
                                 </div>
@@ -288,7 +297,7 @@ include 'db_connection.php';
                 }
                 ?>
             </div>
-            
+
             <div class="text-center mt-4">
                 <a href="shop.php" class="btn btn-outline-dark px-4">View All Collections</a>
             </div>
@@ -300,7 +309,7 @@ include 'db_connection.php';
         <div class="container">
             <h2 class="text-center section-title mb-4">Featured Selection</h2>
             <p class="text-center text-muted mb-5">Our current favorites</p>
-            
+
             <div class="row g-4">
                 <?php
                 $query = "SELECT * FROM tbl_featured INNER JOIN tbl_product ON tbl_product.id = tbl_featured.product_id LIMIT 8";
@@ -315,19 +324,22 @@ include 'db_connection.php';
                         <div class="col-md-6 col-lg-3">
                             <div class="product-card card h-100 border-0">
                                 <div class="product-img-container position-relative">
-                                    <img src="./admin/uploads/categoryimg/<?= htmlspecialchars($row["image"]) ?>" 
-                                         class="product-img" 
-                                         alt="<?= htmlspecialchars($row["name"]) ?>">
+                                    <img src="./admin/uploads/categoryimg/<?= htmlspecialchars($row["image"]) ?>"
+                                        class="product-img" alt="<?= htmlspecialchars($row["name"]) ?>">
                                     <?php if ($discount > 0): ?>
                                         <span class="product-badge badge bg-danger">-<?= $discount ?>%</span>
                                     <?php endif; ?>
                                     <div class="product-actions">
-                                        <a href="wishlist_insert.php?id=<?= $id ?>" class="btn btn-light rounded-circle mx-1" title="Add to Wishlist">
+                                        <a href="wishlist_insert.php?id=<?= $id ?>" class="btn btn-light rounded-circle mx-1"
+                                            title="Add to Wishlist">
                                             <i class="bi bi-heart text-danger"></i>
                                         </a>
-                                        <a href="single-product.php?id=<?= $id ?>" class="btn btn-light rounded-circle mx-1" title="Quick View">
-                                            <i class="bi bi-eye"></i>
-                                        </a>
+                                        <form action="single-product.php" method="post" class="d-inline">
+                                            <input type="hidden" name="id" value="<?= $row['id'] ?>">
+                                            <button type="submit" class="btn btn-sm btn-light rounded-circle shadow-sm">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                        </form>
                                     </div>
                                 </div>
                                 <div class="card-body text-center">
@@ -336,7 +348,8 @@ include 'db_connection.php';
                                     <div class="mb-3">
                                         <span class="h5 text-dark">₹<?= number_format($row['sale_price'], 2) ?></span>
                                         <?php if ($discount > 0): ?>
-                                            <span class="text-decoration-line-through text-muted ms-2">₹<?= number_format($row['MRP'], 2) ?></span>
+                                            <span
+                                                class="text-decoration-line-through text-muted ms-2">₹<?= number_format($row['MRP'], 2) ?></span>
                                         <?php endif; ?>
                                     </div>
                                     <form action="cart_insert.php" method="post" class="d-grid">
@@ -358,7 +371,7 @@ include 'db_connection.php';
                 }
                 ?>
             </div>
-            
+
             <div class="text-center mt-4">
                 <a href="shop.php" class="btn btn-outline-dark px-4">View All Products</a>
             </div>
@@ -386,21 +399,21 @@ include 'db_connection.php';
     <!-- Custom JS -->
     <script>
         // Simple animation for elements when they come into view
-        document.addEventListener('DOMContentLoaded', function() {
-            const animateOnScroll = function() {
+        document.addEventListener('DOMContentLoaded', function () {
+            const animateOnScroll = function () {
                 const elements = document.querySelectorAll('.feature-card, .category-card, .product-card');
-                
+
                 elements.forEach(element => {
                     const elementPosition = element.getBoundingClientRect().top;
                     const screenPosition = window.innerHeight / 1.2;
-                    
-                    if(elementPosition < screenPosition) {
+
+                    if (elementPosition < screenPosition) {
                         element.style.opacity = '1';
                         element.style.transform = 'translateY(0)';
                     }
                 });
             };
-            
+
             // Set initial state
             const cards = document.querySelectorAll('.feature-card, .category-card, .product-card');
             cards.forEach(card => {
@@ -408,7 +421,7 @@ include 'db_connection.php';
                 card.style.transform = 'translateY(20px)';
                 card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
             });
-            
+
             // Run on load and scroll
             animateOnScroll();
             window.addEventListener('scroll', animateOnScroll);

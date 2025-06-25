@@ -52,7 +52,7 @@ $items_result = mysqli_query($conn, $items_query);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order Receipt | GreenHarvest</title>
+    <title>Order Receipt | electronic item </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -163,9 +163,8 @@ $items_result = mysqli_query($conn, $items_query);
         </div>
         <div class="print-only company-header">
             <img src="images/logo.png" alt="GreenHarvest" class="company-logo">
-            <h2>GreenHarvest Organic Farms</h2>
-            <p>123 Organic Way, Farmville, CA 12345</p>
-            <p>Phone: (123) 456-7890 | Email: info@greenharvest.com</p>
+            <h2>electronic item</h2>
+            <p>Phone: (123) 456-7890 | Email: info@electronicitem.com</p>
             <h3 class="mt-3">ORDER RECEIPT</h3>
         </div>
         
@@ -184,7 +183,7 @@ $items_result = mysqli_query($conn, $items_query);
                     </div>
                     <div class="col-md-6">
                         <h5>Customer Information</h5>
-                        <p><strong>Name:</strong> <?= htmlspecialchars($order['customer_name'] ?? 'N/A') ?></p>
+                        <p><strong>Name:</strong> <?= htmlspecialchars($order['customer_name']) ?></p>
                     </div>
                 </div>
                 

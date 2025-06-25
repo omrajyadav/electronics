@@ -30,10 +30,10 @@ include('sidebar.php');
                         </div>
 
                         <!-- Category Description -->
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label for="category_description">Category Description</label>
                             <textarea name="description" id="description" class="form-control form-control-lg" placeholder="Enter category description" required></textarea>
-                        </div>
+                        </div> -->
 
                         <div class="form-group">
                             <button type="submit" name="submit" class="btn btn-primary btn-lg btn-block">Submit</button>

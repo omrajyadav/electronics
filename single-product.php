@@ -36,8 +36,8 @@ if (isset($_POST["id"])) {
     <style>
         :root {
             --primary-color: rgb(5, 11, 22);
-            --secondary-color: #1e40af;
-            --accent-color: #3b82f6;
+            --secondary-color: #d4a373;;
+            --accent-color: #d4a373;;
             --dark-color: #1e293b;
             --light-color: #f8fafc;
             --success-color: #10b981;

@@ -44,30 +44,7 @@ include "db_connection.php";
 
 <!-- Main Content with Improved Styling -->
 <div class="container-fluid py-5" style="margin-top: 100px; background-color: #f8f9fa;">
-    <!-- Notification Alerts -->
-    <div class="container">
-        <?php if (isset($_SESSION["danger"])): ?>
-            <div class="alert alert-danger alert-dismissible fade show shadow-sm" role="alert">
-                <div class="d-flex align-items-center">
-                    <i class="fas fa-exclamation-circle me-2"></i>
-                    <span><?= $_SESSION["danger"] ?></span>
-                    <button type="button" class="btn-close ms-auto" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-            </div>
-            <?php unset($_SESSION["danger"]); ?>
-        <?php endif; ?>
-
-        <?php if (isset($_SESSION["success"])): ?>
-            <div class="alert alert-success alert-dismissible fade show shadow-sm" role="alert">
-                <div class="d-flex align-items-center">
-                    <i class="fas fa-check-circle me-2"></i>
-                    <span><?= $_SESSION["success"] ?></span>
-                    <button type="button" class="btn-close ms-auto" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-            </div>
-            <?php unset($_SESSION["success"]); ?>
-        <?php endif; ?>
-    </div>
+   
 
     <!-- Cart Header -->
     <div class="container mb-4">

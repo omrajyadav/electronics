@@ -75,6 +75,7 @@ $result = mysqli_query($conn, $query);
                 </a>
                 
                 <button class="btn btn-outline-secondary px-4">
+                    <a href="print.php" class="btn btn-primary px-4" ></a>
                     <i class="fas fa-print me-2"></i>Print Invoice
                 </button>
             </div>

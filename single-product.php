@@ -26,6 +26,7 @@ if (isset($_POST["id"])) {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,7 +35,7 @@ if (isset($_POST["id"])) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
         :root {
-            --primary-color:rgb(5, 11, 22);
+            --primary-color: rgb(5, 11, 22);
             --secondary-color: #1e40af;
             --accent-color: #3b82f6;
             --dark-color: #1e293b;
@@ -257,21 +258,23 @@ if (isset($_POST["id"])) {
             .product-title {
                 font-size: 1.5rem;
             }
-            
+
             .current-price {
                 font-size: 1.5rem;
             }
-            
+
             .action-buttons {
                 flex-direction: column;
             }
-            
-            .btn-primary, .btn-secondary {
+
+            .btn-primary,
+            .btn-secondary {
                 width: 100%;
             }
         }
     </style>
 </head>
+
 <body>
     <!-- Product Hero Section -->
     <section class="product-hero">
@@ -292,15 +295,16 @@ if (isset($_POST["id"])) {
             <!-- Product Gallery -->
             <div class="col-lg-6 mb-4">
                 <div class="product-gallery">
-                    <img src="uploads/categoryimg/<?= htmlspecialchars($row["image"]) ?>" alt="<?= htmlspecialchars($row["name"]) ?>" class="img-fluid">
+                    <img src="uploads/categoryimg/<?= htmlspecialchars($row["image"]) ?>"
+                        alt="<?= htmlspecialchars($row["name"]) ?>" class="img-fluid">
                 </div>
             </div>
-            
+
             <!-- Product Info -->
             <div class="col-lg-6 mb-4">
                 <div class="product-info">
                     <h1 class="product-title"><?= htmlspecialchars($row["name"]) ?></h1>
-                    
+
                     <div class="price-container">
                         <?php if ($row["discount_percentaged"] > 0): ?>
                             <span class="current-price">₹<?= number_format($sale_price, 2) ?></span>
@@ -310,7 +314,7 @@ if (isset($_POST["id"])) {
                             <span class="current-price">₹<?= number_format($row["MRP"], 2) ?></span>
                         <?php endif; ?>
                     </div>
-                    
+
                     <div class="rating">
                         <div class="stars">
                             <i class="bi bi-star-fill"></i>
@@ -321,7 +325,7 @@ if (isset($_POST["id"])) {
                         </div>
                         <span class="review-count">(400+ reviews)</span>
                     </div>
-                    
+
                     <div class="product-meta">
                         <div class="meta-item">
                             <span class="meta-label">Category:</span>
@@ -332,17 +336,17 @@ if (isset($_POST["id"])) {
                             <span class="meta-value text-success">In Stock</span>
                         </div>
                     </div>
-                    
+
                     <div class="product-description">
                         <p><?= htmlspecialchars($row["description"]) ?></p>
                     </div>
-                    
+
                     <div class="quantity-selector">
                         <button class="quantity-btn minus">-</button>
                         <input type="number" class="quantity-input" value="1" min="1" id="productQuantity">
                         <button class="quantity-btn plus">+</button>
                     </div>
-                    
+
                     <div class="action-buttons">
                         <form action="cart_insert.php" method="post" class="w-100">
                             <input type="hidden" name="id" value="<?= $row['id'] ?>">
@@ -351,11 +355,12 @@ if (isset($_POST["id"])) {
                                 <i class="bi bi-cart-plus"></i> Add to Cart
                             </button>
                         </form>
-                        <form action="wishlist_insert.php" method="post">
-                            <input type="hidden" name="id" value="<?= $row['id'] ?>">
-                            <button type="submit" class="btn-secondary">
-                                <i class="bi bi-heart"></i>
-                            </button>
+                        <form>
+                            <a href="wishlist_insert.php?id=<?= $row['id'] ?>"
+                                class="btn btn-sm btn-light rounded-circle shadow-sm mb-2">
+                                <i class="fas fa-heart text-danger"></i>
+                            </a>
+                            
                         </form>
                     </div>
                 </div>
@@ -365,27 +370,27 @@ if (isset($_POST["id"])) {
 
     <script>
         // Quantity selector functionality
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const minusBtn = document.querySelector('.quantity-btn.minus');
             const plusBtn = document.querySelector('.quantity-btn.plus');
             const quantityInput = document.getElementById('productQuantity');
             const cartQtyField = document.getElementById('cartQtyField');
-            
-            minusBtn.addEventListener('click', function() {
+
+            minusBtn.addEventListener('click', function () {
                 let value = parseInt(quantityInput.value);
                 if (value > 1) {
                     quantityInput.value = value - 1;
                     cartQtyField.value = quantityInput.value;
                 }
             });
-            
-            plusBtn.addEventListener('click', function() {
+
+            plusBtn.addEventListener('click', function () {
                 let value = parseInt(quantityInput.value);
                 quantityInput.value = value + 1;
                 cartQtyField.value = quantityInput.value;
             });
-            
-            quantityInput.addEventListener('change', function() {
+
+            quantityInput.addEventListener('change', function () {
                 let value = parseInt(this.value);
                 if (isNaN(value) || value < 1) {
                     this.value = 1;
@@ -397,4 +402,5 @@ if (isset($_POST["id"])) {
 
     <?php include "footer.php"; ?>
 </body>
+
 </html>

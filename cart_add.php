@@ -3,6 +3,45 @@ include "header.php";
 include "db_connection.php";
 ?>
 
+<!-- Toast Notification -->
+<div aria-live="polite" aria-atomic="true" class="position-fixed top-0 end-0 p-3"
+    style="z-index: 1080; min-width: 300px;">
+    <?php if (isset($_SESSION["success"])): ?>
+        <div class="toast align-items-center text-bg-success border-0 show" id="cartToast" role="alert"
+            aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    <i class="fas fa-check-circle me-2"></i> <?= $_SESSION["success"] ?>
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                    aria-label="Close"></button>
+            </div>
+        </div>
+        <?php unset($_SESSION["success"]);
+    elseif (isset($_SESSION["danger"])): ?>
+        <div class="toast align-items-center text-bg-danger border-0 show" id="cartToast" role="alert" aria-live="assertive"
+            aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    <i class="fas fa-exclamation-circle me-2"></i> <?= $_SESSION["danger"] ?>
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                    aria-label="Close"></button>
+            </div>
+        </div>
+        <?php unset($_SESSION["danger"]);
+    endif; ?>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var toastEl = document.getElementById('cartToast');
+        if (toastEl) {
+            var toast = new bootstrap.Toast(toastEl, { delay: 3000 });
+            toast.show();
+        }
+    });
+</script>
+
 <!-- Main Content with Improved Styling -->
 <div class="container-fluid py-5" style="margin-top: 100px; background-color: #f8f9fa;">
     <!-- Notification Alerts -->

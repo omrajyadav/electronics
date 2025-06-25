@@ -51,6 +51,24 @@ include "db_connection.php";
                                     <i class="fas fa-chevron-right small"></i>
                                 </div>
                             </a>
+                            <a href="shop.php?min_range=61000&max_range=80000" class="list-group-item list-group-item-action border-0 rounded">
+                                <div class="d-flex justify-content-between">
+                                    <span>₹61,000 - ₹80,000</span>
+                                    <i class="fas fa-chevron-right small"></i>
+                                </div>
+                            </a>
+                            <a href="shop.php?min_range=81000&max_range=100000" class="list-group-item list-group-item-action border-0 rounded">
+                                <div class="d-flex justify-content-between">
+                                    <span>₹81,000 - ₹1,000,00</span>
+                                    <i class="fas fa-chevron-right small"></i>
+                                </div>
+                            </a>
+                            <a href="shop.php?min_range=100000&max_range=1200000" class="list-group-item list-group-item-action border-0 rounded">
+                                <div class="d-flex justify-content-between">
+                                    <span>₹1,00,000 - ₹1,20,000</span>
+                                    <i class="fas fa-chevron-right small"></i>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>

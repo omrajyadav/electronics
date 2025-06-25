@@ -2,6 +2,15 @@
 include "header.php";
 include "db_connection.php";
 ?>
+<div class="form-inline mb-3">
+    <div class="input-group" data-widget="search">
+        <form ">
+            <input class="form-control" name="name" value="<?= isset($_GET["name"]) ? $_GET["name"] : "" ?>
+           " type="search" placeholder="search">
+        </form>
+        
+    </div>
+</div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <div class="container-fluid py-5" style="margin-top: 80px;">
     <div class="row">
@@ -15,55 +24,64 @@ include "db_connection.php";
                     <div class="card-body">
                         <h6 class="fw-bold mb-3 text-uppercase small">Price Range</h6>
                         <div class="list-group list-group-flush">
-                            <a href="shop.php" class="list-group-item list-group-item-action border-0 rounded mb-2 <?= !isset($_GET['min_range']) ? 'active bg-light' : '' ?>">
+                            <a href="shop.php"
+                                class="list-group-item list-group-item-action border-0 rounded mb-2 <?= !isset($_GET['min_range']) ? 'active bg-light' : '' ?>">
                                 <div class="d-flex justify-content-between">
                                     <span>All Prices</span>
                                     <i class="fas fa-chevron-right small"></i>
                                 </div>
                             </a>
-                            <a href="shop.php?min_range=100&max_range=1000" class="list-group-item list-group-item-action border-0 rounded mb-2">
+                            <a href="shop.php?min_range=100&max_range=1000"
+                                class="list-group-item list-group-item-action border-0 rounded mb-2">
                                 <div class="d-flex justify-content-between">
                                     <span>₹100 - ₹1,000</span>
                                     <i class="fas fa-chevron-right small"></i>
                                 </div>
                             </a>
-                            <a href="shop.php?min_range=1010&max_range=6000" class="list-group-item list-group-item-action border-0 rounded mb-2">
+                            <a href="shop.php?min_range=1010&max_range=6000"
+                                class="list-group-item list-group-item-action border-0 rounded mb-2">
                                 <div class="d-flex justify-content-between">
                                     <span>₹1,010 - ₹6,000</span>
                                     <i class="fas fa-chevron-right small"></i>
                                 </div>
                             </a>
-                            <a href="shop.php?min_range=6010&max_range=9999" class="list-group-item list-group-item-action border-0 rounded mb-2">
+                            <a href="shop.php?min_range=6010&max_range=9999"
+                                class="list-group-item list-group-item-action border-0 rounded mb-2">
                                 <div class="d-flex justify-content-between">
                                     <span>₹6,010 - ₹9,999</span>
                                     <i class="fas fa-chevron-right small"></i>
                                 </div>
                             </a>
-                            <a href="shop.php?min_range=10000&max_range=30000" class="list-group-item list-group-item-action border-0 rounded mb-2">
+                            <a href="shop.php?min_range=10000&max_range=30000"
+                                class="list-group-item list-group-item-action border-0 rounded mb-2">
                                 <div class="d-flex justify-content-between">
                                     <span>₹10,000 - ₹30,000</span>
                                     <i class="fas fa-chevron-right small"></i>
                                 </div>
                             </a>
-                            <a href="shop.php?min_range=31000&max_range=60000" class="list-group-item list-group-item-action border-0 rounded">
+                            <a href="shop.php?min_range=31000&max_range=60000"
+                                class="list-group-item list-group-item-action border-0 rounded">
                                 <div class="d-flex justify-content-between">
                                     <span>₹31,000 - ₹60,000</span>
                                     <i class="fas fa-chevron-right small"></i>
                                 </div>
                             </a>
-                            <a href="shop.php?min_range=61000&max_range=80000" class="list-group-item list-group-item-action border-0 rounded">
+                            <a href="shop.php?min_range=61000&max_range=80000"
+                                class="list-group-item list-group-item-action border-0 rounded">
                                 <div class="d-flex justify-content-between">
                                     <span>₹61,000 - ₹80,000</span>
                                     <i class="fas fa-chevron-right small"></i>
                                 </div>
                             </a>
-                            <a href="shop.php?min_range=81000&max_range=100000" class="list-group-item list-group-item-action border-0 rounded">
+                            <a href="shop.php?min_range=81000&max_range=100000"
+                                class="list-group-item list-group-item-action border-0 rounded">
                                 <div class="d-flex justify-content-between">
                                     <span>₹81,000 - ₹1,000,00</span>
                                     <i class="fas fa-chevron-right small"></i>
                                 </div>
                             </a>
-                            <a href="shop.php?min_range=100000&max_range=800000" class="list-group-item list-group-item-action border-0 rounded">
+                            <a href="shop.php?min_range=100000&max_range=800000"
+                                class="list-group-item list-group-item-action border-0 rounded">
                                 <div class="d-flex justify-content-between">
                                     <span>₹1,00,000 - ₹8,00,000</span>
                                     <i class="fas fa-chevron-right small"></i>
@@ -82,7 +100,8 @@ include "db_connection.php";
                 <div class="card mb-4 border-0 shadow-sm">
                     <div class="card-body">
                         <div class="d-flex flex-wrap gap-2">
-                            <a href="shop.php" class="btn btn-sm px-3 rounded-pill <?= !isset($_GET['id']) ? 'btn-dark' : 'btn-outline-dark' ?>">
+                            <a href="shop.php"
+                                class="btn btn-sm px-3 rounded-pill <?= !isset($_GET['id']) ? 'btn-dark' : 'btn-outline-dark' ?>">
                                 All Products
                             </a>
                             <?php
@@ -136,7 +155,8 @@ include "db_connection.php";
                                         <?php endif; ?>
 
                                         <div class="product-actions position-absolute top-0 end-0 p-2">
-                                            <a href="wishlist_insert.php?id=<?= $row['id'] ?>" class="btn btn-sm btn-light rounded-circle shadow-sm mb-2">
+                                            <a href="wishlist_insert.php?id=<?= $row['id'] ?>"
+                                                class="btn btn-sm btn-light rounded-circle shadow-sm mb-2">
                                                 <i class="fas fa-heart text-danger"></i>
                                             </a>
                                             <form action="single-product.php" method="post" class="d-inline">
@@ -156,10 +176,13 @@ include "db_connection.php";
 
                                         <div class="d-flex align-items-center mb-3">
                                             <?php if ($row["discount_percentaged"] > 0): ?>
-                                                <span class="h5 mb-0 text-dark fw-bold">₹<?= number_format($row["sale_price"], 2) ?></span>
-                                                <small class="text-decoration-line-through text-muted ms-2">₹<?= number_format($row["MRP"], 2) ?></small>
+                                                <span
+                                                    class="h5 mb-0 text-dark fw-bold">₹<?= number_format($row["sale_price"], 2) ?></span>
+                                                <small
+                                                    class="text-decoration-line-through text-muted ms-2">₹<?= number_format($row["MRP"], 2) ?></small>
                                             <?php else: ?>
-                                                <span class="h5 mb-0 text-dark fw-bold">₹<?= number_format($row["sale_price"], 2) ?></span>
+                                                <span
+                                                    class="h5 mb-0 text-dark fw-bold">₹<?= number_format($row["sale_price"], 2) ?></span>
                                             <?php endif; ?>
                                         </div>
 
@@ -182,6 +205,7 @@ include "db_connection.php";
                               </div>';
                     }
                     ?>
+                    
                 </div>
             </section>
         </div>
@@ -192,42 +216,42 @@ include "db_connection.php";
     .product-card {
         transition: all 0.3s ease;
     }
-    
+
     .product-card:hover {
         transform: translateY(-5px);
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
     }
-    
+
     .product-actions {
         opacity: 0;
         transition: opacity 0.3s ease;
     }
-    
+
     .product-card:hover .product-actions {
         opacity: 1;
     }
-    
+
     .object-fit-contain {
         object-fit: contain;
     }
-    
+
     .text-truncate-2 {
         display: -webkit-box;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         overflow: hidden;
     }
-    
+
     .sticky-top {
         z-index: 1;
     }
-    
+
     .list-group-item.active {
         background-color: #f8f9fa;
         color: #212529;
         border-left: 3px solid #d4a373;
     }
-    
+
     .list-group-item:hover {
         background-color: #f8f9fa;
     }

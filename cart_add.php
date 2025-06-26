@@ -44,7 +44,7 @@ include "db_connection.php";
 
 <!-- Main Content with Improved Styling -->
 <div class="container-fluid py-5" style="margin-top: 100px; background-color: #f8f9fa;">
-   
+
 
     <!-- Cart Header -->
     <div class="container mb-4">
@@ -73,6 +73,8 @@ include "db_connection.php";
                             <table class="table align-middle mb-0">
                                 <thead class="bg-dark text-white">
                                     <tr>
+                                        <th scope="col">status</th>
+
                                         <th scope="col" class="ps-4">Product img</th>
                                         <th scope="col">Product name</th>
                                         <th scope="col">Price</th>
@@ -93,6 +95,15 @@ include "db_connection.php";
                                         $subtotal += $item_total;
                                         ?>
                                         <tr class="border-bottom">
+                                            <td>
+                                                <form method="post" action="updatecartstatus.php">
+                                                    <input type="hidden" name="cart_id" value="<?= $row['cart_id'] ?>">
+                                                    <input type="hidden" name="cart_status" value="<?= $row['cart_status'] == 'active' ? 'inactive' : 'active' ?>">
+                                                    <button type="submit" class="toggle-btn<?= $row['cart_status'] == 'active' ? '' : ' cross' ?>" style="border:none;background:none;">
+                                                        <?= $row['cart_status'] == 'active' ? '✔' : '✖' ?>
+                                                    </button>
+                                                </form>
+                                            </td>
                                             <td class="ps-4 py-3">
                                                 <div class="d-flex align-items-center">
                                                     <img src="./admin/uploads/categoryimg/<?= $row["image"] ?>"

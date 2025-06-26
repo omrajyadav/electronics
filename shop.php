@@ -200,7 +200,7 @@ include "db_connection.php";
                         }
                     } else {
                         echo '<div class="col-12 text-center py-5">
-                                <div class="alert alert-info">No products found matching your criteria.</div>
+                                <div class="alert alert-info">No fount products .</div>
                                 <a href="shop.php" class="btn btn-dark rounded-pill px-4">Browse All Products</a>
                               </div>';
                     }

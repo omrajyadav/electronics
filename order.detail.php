@@ -41,7 +41,7 @@ $result = mysqli_query($conn, $query);
                             <td>₹<?= number_format($row["oc_total_price"], 2) ?></td>
                             <td>
                                 <span class="badge bg-info">
-                                    <i class="fas fa-truck me-1"></i> 
+                                    <i class="fas fa-truck me-1"></i> Shipped
                                 </span>
                             </td>
                         </tr>
@@ -76,7 +76,7 @@ $result = mysqli_query($conn, $query);
                 
                 <button class="btn btn-outline-secondary px-4">
                     <a href="print.php" class="btn btn-primary px-4" ></a>
-                    <i class="fas fa-print me-2">Print Invoice</i>
+                    <i class="fas fa-print me-2"></i>Print Invoice
                 </button>
             </div>
         </div>

@@ -141,7 +141,7 @@
   <!-- Main Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white">
     <div class="container">
-      <a class="navbar-brand" href="index.html">
+      <a class="navbar-brand" href="">
         <img src="img/logo.png" alt="Eiser Logo" class="img-fluid">
       </a>
 

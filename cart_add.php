@@ -191,9 +191,9 @@ include "db_connection.php";
                             </span>
                         </div>
                         <div class="d-grid gap-2">
-                            <button class="btn btn-primary btn-lg rounded-pill py-3 fw-bold">
+                            <a  href="checkout.php" class="btn btn-primary btn-lg rounded-pill py-3 fw-bold">
                                 Proceed to Checkout
-                            </button>
+                                    </a>
                             <a href="index.php" class="btn btn-outline-secondary rounded-pill py-3">
                                 Continue Shopping
                             </a>

@@ -13,7 +13,7 @@ $query = "INSERT INTO tbl_cart (`cart_product_id`, `cart_customer_id`, `cart_qty
 ('$product_id','$customer_id','$cart_qty')";
 $result = mysqli_query($conn, $query);
 if ($result) {
-    $_SESSION["success"] = "cart added to cart successfully";
+    $_SESSION["success"] = "cart added to  successfully";
     echo "<script>window.location.href='cart_add.php'</script>";
 } else {
     echo "Contact form submission failed";

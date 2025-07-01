@@ -21,7 +21,6 @@ $result = mysqli_query($conn, $query);
                                 <th>Order #</th>
                                 <th>Status</th>
                                 <th>Date</th>
-                                <th>Total</th>
                                 <th>Payment Method</th>
                                 <th>Payment Status</th>
                                 <th>Action</th>
@@ -50,7 +49,7 @@ $result = mysqli_query($conn, $query);
                                         <?= htmlspecialchars($row['order_m_status']) ?>
                                     </td>
                                     <td><?= isset($row['order_m_date']) ? date('d M Y', strtotime($row['order_m_date'])) : '-' ?></td>
-                                    <td class="fw-bold">₹<?= isset($row['order_m_total_price']) && is_numeric($row['order_m_total_price']) ? number_format($row['order_m_total_price'], 2) : '0.00' ?></td>
+                                    <!-- <td class="fw-bold">₹<?= isset($row['order_m_total_price']) && is_numeric($row['order_m_total_price']) ? number_format($row['order_m_total_price'], 2) : '0.00' ?></td> -->
                                     <td><?= htmlspecialchars($row['order_m_payment_term'] ?? '-') ?></td>
                                     <td>
                                         <span class="badge 

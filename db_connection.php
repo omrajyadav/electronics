@@ -4,7 +4,7 @@ $_username = "root";
 $_password= "";
 $_database="ecom_table";
 
-$conn = mysqli_connect($_servername, $_username, $_password, $_database);
+$conn = mysqli_connect($_servernae, $_username, $_password, $_database);
 
 if($conn){
     // echo "Connection successful <br>";

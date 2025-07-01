@@ -174,9 +174,9 @@ $total = $subtotal + $shipping + $tax;
                             </div>
                         </div>
                         
-                        <button type="submit" class="btn btn-primary btn-lg w-100 py-3 mb-3">
+                        <a  href="order_master.php"type="submit" class="btn btn-primary btn-lg w-100 py-3 mb-3">
                             <i class="fas fa-lock me-2"></i> Place Order
-                        </button>
+                            </a>
                         
                         <a href="index.php" class="btn btn-outline-secondary w-100 py-3">
                             <i class="fas fa-arrow-left me-2"></i> Continue Shopping

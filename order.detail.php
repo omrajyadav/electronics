@@ -2,7 +2,6 @@
 include "header.php";
 include "db_connection.php";
 $count = 0;
-$grandTotal = 0;
 $query = "SELECT * FROM `tbl_order_child` INNER JOIN tbl_product ON tbl_product.id=tbl_order_child.oc_product_id";
 $result = mysqli_query($conn, $query);
 ?>
@@ -33,7 +32,7 @@ $result = mysqli_query($conn, $query);
                         </tr>
                     </thead>
                     <tbody>
-                        <?php while ($row = mysqli_fetch_array($result)) { $grandTotal += $row["oc_total_price"]; ?>
+                        <?php while ($row = mysqli_fetch_array($result)) { ?>
                         <tr>
                             <td><?= ++$count ?></td>
                             <td><?= htmlspecialchars($row['name']) ?></td>
@@ -58,7 +57,12 @@ $result = mysqli_query($conn, $query);
                     <tfoot>
                         <tr class="table-active">
                             <th colspan="4" class="text-end">Grand Total:</th>
-                            <th colspan="2">₹<?= number_format($grandTotal, 2) ?></th>
+                            <th colspan="2">
+                                ₹<?php 
+                                    $grandTotal = array_sum(array_column(mysqli_fetch_all($result, MYSQLI_ASSOC), 'oc_total_price'));
+                                    echo number_format($grandTotal, 2);
+                                ?>
+                            </th>
                         </tr>
                     </tfoot>
                     <?php } ?>
@@ -72,7 +76,7 @@ $result = mysqli_query($conn, $query);
                 
                 <button class="btn btn-outline-secondary px-4">
                     <a href="print.php" class="btn btn-primary px-4" ></a>
-                    <i class="fas fa-print me-2"></i>Print Invoice
+                    <i class="fas fa-print me-2">Print Invoice</i>
                 </button>
             </div>
         </div>

@@ -41,7 +41,7 @@ $result = mysqli_query($conn, $query);
                             <td>₹<?= number_format($row["oc_total_price"], 2) ?></td>
                             <td>
                                 <span class="badge bg-info">
-                                    <i class="fas fa-truck me-1"></i> Shipped
+                                    <i class="fas fa-truck me-1"></i> 
                                 </span>
                             </td>
                         </tr>

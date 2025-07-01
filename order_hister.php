@@ -75,7 +75,7 @@ $result = mysqli_query($conn, $query);
                     <i class="fas fa-box-open fa-4x text-muted mb-3"></i>
                     <h4>No orders found</h4>
                     <p class="text-muted">You haven't placed any orders yet.</p>
-                    <a href="shop.php" class="btn btn-primary mt-3">
+                    <a href="products.php" class="btn btn-primary mt-3">
                         <i class="fas fa-shopping-bag me-1"></i> Shop Now
                     </a>
                 </div>

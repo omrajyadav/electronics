@@ -1,4 +1,4 @@
 # electronics
 ![alt text](image.png)
 order detail
-![alt text](image-1.png))
+![alt text](image-1.png)

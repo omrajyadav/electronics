@@ -4,11 +4,10 @@ include "db_connection.php";
 ?>
 <div class="form-inline mb-3">
     <div class="input-group" data-widget="search">
-        <form method="get">
-            <input class="form-control" name="name" value="<?= isset($_GET["name"]) ? $_GET["name"] : "" ?>
-           " type="search" placeholder="search">
+        <form method="get" action="shop.php" class="d-flex w-10">
+            <input class="form-control" name="name" value="<?= isset($_GET['name']) ? htmlspecialchars($_GET['name']) : '' ?>" type="search" placeholder="Search products...">
+            <button class="btn btn-primary ms-2" type="submit"><i class="fas fa-search"></i></button>
         </form>
-        
     </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -131,6 +130,10 @@ include "db_connection.php";
                     if (isset($_GET["max_range"]) && is_numeric($_GET["max_range"])) {
                         $max_range = intval($_GET["max_range"]);
                         $where[] = "sale_price <= $max_range";
+                    }
+                    if (isset($_GET["name"]) && $_GET["name"] !== "") {
+                        $search = mysqli_real_escape_string($conn, $_GET["name"]);
+                        $where[] = "name LIKE '%$search%'";
                     }
                     $query = "SELECT * FROM tbl_product";
                     if (!empty($where)) {

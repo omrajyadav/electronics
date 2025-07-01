@@ -27,7 +27,7 @@ $result = mysqli_query($conn, $query);
                             <th width="5%">#</th>
                             <th>Product Name</th>
                             <th width="10%">Quantity</th>
-                            <th width="15%">Unit Price</th>
+                            <!-- <th width="15%">Unit Price</th> -->
                             <th width="15%">Total Price</th>
                             <th width="10%">Status</th>
                         </tr>
@@ -40,7 +40,7 @@ $result = mysqli_query($conn, $query);
                             <td><?= ++$count ?></td>
                             <td><?= htmlspecialchars($row['name']) ?></td>
                             <td><?= $row['oc_product_qty'] ?></td>
-                            <td>₹<?= number_format($row["sale_price"], 2) ?></td>
+                            <!-- <td>₹<?= number_format($row["sale_price"], 2) ?></td> -->
                             <td>₹<?= number_format($row["oc_total_price"], 2) ?></td>
                             <td>
                                 <span class="badge bg-info">

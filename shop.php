@@ -2,14 +2,7 @@
 include "header.php";
 include "db_connection.php";
 ?>
-<div class="form-inline mb-3">
-    <div class="input-group" data-widget="search">
-        <form method="get" action="shop.php" class="d-flex w-10">
-            <input class="form-control" name="name" value="<?= isset($_GET['name']) ? htmlspecialchars($_GET['name']) : '' ?>" type="search" placeholder="Search products...">
-            <button class="btn btn-primary ms-2" type="submit"><i class="fas fa-search"></i></button>
-        </form>
-    </div>
-</div>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <div class="container-fluid py-5" style="margin-top: 80px;">
     <div class="row">
@@ -17,6 +10,15 @@ include "db_connection.php";
         <div class="col-lg-3 col-md-4 mb-4">
             <div class="sticky-top" style="top: 100px;">
                 <div class="card border-0 shadow-sm mb-4">
+                    <div class="input-group" data-widget="search">
+                        <form method="get" action="shop.php" class="d-flex w-10">
+                            <input class="form-control" name="name"
+                                value="<?= isset($_GET['name']) ? htmlspecialchars($_GET['name']) : '' ?>" type="search"
+                                placeholder="Search products...">
+                            <button class="btn btn-primary ms-2" type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+
                     <div class="card-header bg-white border-0">
                         <h5 class="mb-0 fw-bold">Filters</h5>
                     </div>
@@ -208,7 +210,7 @@ include "db_connection.php";
                               </div>';
                     }
                     ?>
-                    
+
                 </div>
             </section>
         </div>

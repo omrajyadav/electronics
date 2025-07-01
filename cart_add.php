@@ -85,8 +85,9 @@ include "db_connection.php";
                                 </thead>
                                 <tbody>
                                     <?php
+                                    $customer_id = $_SESSION['customer_id'];
                                     $subtotal = 0;
-                                    $query = "SELECT * FROM `tbl_cart` INNER JOIN tbl_product ON tbl_cart.cart_product_id = tbl_product.id";
+                                    $query = "SELECT * FROM `tbl_cart` INNER JOIN tbl_product ON tbl_cart.cart_product_id = tbl_product.id WHERE tbl_cart.cart_customer_id = '$customer_id' ";
                                     $result = mysqli_query($conn, $query);
                                     while ($row = mysqli_fetch_array($result)) {
                                         $price = is_numeric($row["sale_price"]) ? (float) $row["sale_price"] : 0;
@@ -98,8 +99,11 @@ include "db_connection.php";
                                             <td>
                                                 <form method="post" action="updatecartstatus.php">
                                                     <input type="hidden" name="cart_id" value="<?= $row['cart_id'] ?>">
-                                                    <input type="hidden" name="cart_status" value="<?= $row['cart_status'] == 'active' ? 'inactive' : 'active' ?>">
-                                                    <button type="submit" class="toggle-btn<?= $row['cart_status'] == 'active' ? '' : ' cross' ?>" style="border:none;background:none;">
+                                                    <input type="hidden" name="cart_status"
+                                                        value="<?= $row['cart_status'] == 'active' ? 'inactive' : 'active' ?>">
+                                                    <button type="submit"
+                                                        class="toggle-btn<?= $row['cart_status'] == 'active' ? '' : ' cross' ?>"
+                                                        style="border:none;background:none;">
                                                         <?= $row['cart_status'] == 'active' ? '✔' : '✖' ?>
                                                     </button>
                                                 </form>

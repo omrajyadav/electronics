@@ -22,7 +22,7 @@ if ($row['cart_status'] == 'active')
     $result = mysqli_query($conn, $query);
     
 }
-if ($result) {
+if ($result ) {
     echo "<script>window.location.href='cart_add.php'</script>";
 
 }

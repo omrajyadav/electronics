@@ -16,7 +16,7 @@ $customer_row = mysqli_fetch_array($result);
 // Fetch cart items
 $query = "SELECT * FROM `tbl_cart` INNER JOIN tbl_product ON tbl_cart.cart_product_id = tbl_product.id WHERE tbl_cart.cart_customer_id = $customer_id";
 $result = mysqli_query($conn, $query);
-$cart_items = [];
+$items = [];
 $subtotal = 0;
 while ($cart_row = mysqli_fetch_array($result)) {
     $items[] = $cart_row;
@@ -174,9 +174,9 @@ $total = $subtotal + $shipping + $tax;
                             </div>
                         </div>
                         
-                        <a  href="order_master.php"type="submit" class="btn btn-primary btn-lg w-100 py-3 mb-3">
+                        <button type="submit" class="btn btn-primary btn-lg w-100 py-3 mb-3">
                             <i class="fas fa-lock me-2"></i> Place Order
-                            </a>
+                        </button>
                         
                         <a href="index.php" class="btn btn-outline-secondary w-100 py-3">
                             <i class="fas fa-arrow-left me-2"></i> Continue Shopping

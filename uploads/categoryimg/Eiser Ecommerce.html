@@ -1,0 +1,795 @@
+
+<!-- saved from url=(0038)http://localhost/electronics/index.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Required meta tags -->
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="http://localhost/electronics/img/favicon.png" type="image/png">
+  <title>Eiser Ecommerce</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="./Eiser Ecommerce_files/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="./Eiser Ecommerce_files/all.min.css">
+
+  <!-- Custom CSS -->
+  <style>
+    :root {
+      --primary-color: #2a2a2a;
+      --accent-color: #d4a373;
+      --light-color: #f8f9fa;
+      --dark-color: #212529;
+    }
+
+    .top-bar {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 8px 0;
+      font-size: 0.9rem;
+    }
+
+    .top-bar a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .top-bar a:hover {
+      color: white;
+    }
+
+    .navbar {
+      padding: 15px 0;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-brand img {
+      height: 40px;
+    }
+
+    .nav-link {
+      color: var(--primary-color);
+      font-weight: 500;
+      padding: 8px 15px !important;
+      transition: all 0.3s;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--accent-color);
+    }
+
+    .dropdown-menu {
+      border: none;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .dropdown-item {
+      padding: 8px 20px;
+    }
+
+    .dropdown-item:hover {
+      background-color: rgba(212, 163, 115, 0.1);
+      color: var(--accent-color);
+    }
+
+    .icon-badge {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      width: 20px;
+      height: 20px;
+      background-color: var(--accent-color);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: bold;
+    }
+
+    .nav-icon {
+      font-size: 1.3rem;
+      color: var(--primary-color);
+      position: relative;
+      margin: 0 10px;
+      transition: color 0.3s;
+    }
+
+    .nav-icon:hover {
+      color: var(--accent-color);
+    }
+
+    @media (max-width: 991.98px) {
+      .navbar-collapse {
+        background-color: white;
+        padding: 20px;
+        margin-top: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .nav-item {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body><header>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <div class="d-flex gap-4">
+            <span><i class="fas fa-phone-alt me-2"></i> +01 256 25 235</span>
+            <span><i class="fas fa-envelope me-2"></i> info@eiser.com</span>
+          </div>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <div class="d-flex gap-4 justify-content-md-end">
+            <a href="http://localhost/electronics/cart.html"><i class="fas fa-gift me-2"></i> Gift Card</a>
+            <a href="http://localhost/electronics/trake.php"><i class="fas fa-truck me-2"></i> Track Order</a>
+            <a href="http://localhost/electronics/contact.php"><i class="fas fa-phone me-2"></i> Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container">
+      <a class="navbar-brand" href="http://localhost/electronics/index.html">
+        <img src="./Eiser Ecommerce_files/logo.png" alt="Eiser Logo" class="img-fluid">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="http://localhost/electronics/index.php">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://localhost/electronics/shop.php">Shop</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="http://localhost/electronics/index.php#" id="pagesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Pages
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="pagesDropdown">
+              <!-- <li><a class="dropdown-item" href="trake.php">Tracking</a></li> -->
+              <!-- <li><a class="dropdown-item" href="category.php">Shop Category</a></li> -->
+              <li><a class="dropdown-item" href="http://localhost/electronics/checkout.php">Product Checkout</a></li>
+              <li><a class="dropdown-item" href="http://localhost/electronics/cart_add.php">Shopping Cart</a></li>
+
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://localhost/electronics/contact.php">Contact</a>
+          </li>
+        </ul>
+
+        <div class="d-flex align-items-center">
+          <a href="http://localhost/electronics/cart_add.php" class="nav-icon position-relative">
+            <i class="fas fa-shopping-cart"></i>
+                          <span class="icon-badge">2</span>
+                      </a>
+
+          <a href="http://localhost/electronics/wishlist.php" class="nav-icon position-relative">
+            <i class="fas fa-heart"></i>
+                          <span class="icon-badge">2</span>
+                      </a>
+
+          <a href="http://localhost/electronics/login.php" class="nav-icon">
+            <i class="fas fa-user"></i>
+          </a>
+
+          <a href="http://localhost/electronics/order_hister.php" class="nav-icon">
+            <i class="fas fa-history"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Bootstrap JS Bundle with Popper -->
+<script src="./Eiser Ecommerce_files/bootstrap.bundle.min.js.download"></script>
+
+
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleHub | Premium Fashion &amp; Lifestyle</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="./Eiser Ecommerce_files/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="./Eiser Ecommerce_files/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --bs-primary: #212529;
+            --bs-secondary: #6c757d;
+            --bs-accent: #d4a373;
+            --bs-light: #f8f9fa;
+            --bs-dark: #212529;
+            --bs-body-font-family: 'Manrope', sans-serif;
+            --bs-heading-font-family: 'Marcellus', serif;
+        }
+
+        body {
+            font-family: var(--bs-body-font-family);
+            color: var(--bs-dark);
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: var(--bs-heading-font-family);
+            letter-spacing: -0.5px;
+        }
+
+        .btn-accent {
+            background-color: var(--bs-accent);
+            border-color: var(--bs-accent);
+            color: white;
+        }
+
+        .btn-accent:hover {
+            background-color: transparent;
+            color: var(--bs-accent);
+            border-color: var(--bs-accent);
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+                url('uploads/categoryimg/img2.jpg') no-repeat center center;
+            background-size: cover;
+            min-height: 90vh;
+        }
+
+        .feature-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--bs-accent);
+            margin: 0 auto 1.5rem;
+            background-color: rgba(212, 163, 115, 0.1);
+            border-radius: 50%;
+        }
+
+        .category-card,
+        .product-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+
+        .category-card:hover,
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Reduced category image size */
+        .category-img {
+            transition: transform 0.5s ease;
+            height: 200px;
+            /* Reduced from 250px */
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .category-card:hover .category-img {
+            transform: scale(1.05);
+        }
+
+        .product-img-container {
+            height: 220px;
+            background-color: var(--bs-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-img {
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+            padding: 20px;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-img {
+            transform: scale(1.05);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            z-index: 2;
+        }
+
+        .product-actions {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .product-card:hover .product-actions {
+            opacity: 1;
+        }
+
+        .newsletter-section {
+            background-color: var(--bs-dark);
+            color: white;
+        }
+
+        .newsletter-form .form-control {
+            border-radius: 50px 0 0 50px;
+            border-right: none;
+        }
+
+        .newsletter-form .btn {
+            border-radius: 0 50px 50px 0;
+        }
+
+        .section-title {
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--bs-accent);
+        }
+
+        /* Responsive adjustments for smaller category images */
+        @media (max-width: 768px) {
+            .category-img {
+                height: 150px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .category-img {
+                height: 120px;
+            }
+        }
+    </style>
+
+
+
+    <!-- Hero Section -->
+    <section class="hero-section d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="text-white p-4 bg-dark bg-opacity-50 rounded">
+                        <h1 class="display-4 fw-bold mb-4">Timeless Style, Modern Sophistication</h1>
+                        <p class="lead mb-4">Discover thoughtfully designed pieces that blend quality craftsmanship with
+                            contemporary aesthetics</p>
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="http://localhost/electronics/shop.php" class="btn btn-accent btn-lg px-4">Shop Now</a>
+                            <a href="http://localhost/electronics/index.php#featured" class="btn btn-outline-light btn-lg px-4">Explore Collections</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card p-4 text-center h-100 rounded" style="opacity: 1; transform: translateY(0px); transition: opacity 0.5s, transform 0.5s;">
+                        <div class="feature-icon">
+                            <i class="bi bi-arrow-repeat"></i>
+                        </div>
+                        <h5 class="fw-bold">Easy Returns</h5>
+                        <p class="text-muted">30-day return policy for your peace of mind</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card p-4 text-center h-100 rounded" style="opacity: 1; transform: translateY(0px); transition: opacity 0.5s, transform 0.5s;">
+                        <div class="feature-icon">
+                            <i class="bi bi-truck"></i>
+                        </div>
+                        <h5 class="fw-bold">Free Shipping</h5>
+                        <p class="text-muted">On all orders over ₹1000</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card p-4 text-center h-100 rounded" style="opacity: 1; transform: translateY(0px); transition: opacity 0.5s, transform 0.5s;">
+                        <div class="feature-icon">
+                            <i class="bi bi-shield-lock"></i>
+                        </div>
+                        <h5 class="fw-bold">Secure Payment</h5>
+                        <p class="text-muted">Shop with confidence</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card p-4 text-center h-100 rounded" style="opacity: 1; transform: translateY(0px); transition: opacity 0.5s, transform 0.5s;">
+                        <div class="feature-icon">
+                            <i class="bi bi-headset"></i>
+                        </div>
+                        <h5 class="fw-bold">Dedicated Support</h5>
+                        <p class="text-muted">We're here to help</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title mb-4">Our Collections</h2>
+            <p class="text-center text-muted mb-5">Carefully curated for the modern individual</p>
+
+            <div class="row g-4">
+                                        <div class="col-md-6 col-lg-4">
+                            <div class="category-card card h-100 border-0" style="opacity: 1; transform: translateY(0px); transition: opacity 0.5s, transform 0.5s;">
+                                <div class="position-relative overflow-hidden">
+                                    <img src="./Eiser Ecommerce_files/air.jpg" class="category-img w-100" alt="Air Conditioners">
+                                    <div class="card-img-overlay d-flex align-items-center justify-content-center bg-dark bg-opacity-30 opacity-0 hover-opacity-100 transition">
+                                        <a href="http://localhost/electronics/shop.php?id=19" class="btn btn-accent">View Collection</a>
+                                    </div>
+                                </div>
+                                <div class="card-body text-center">
+                                    <h4 class="card-title">Air Conditioners</h4>
+                                </div>
+                            </div>
+                        </div>
+                                                <div class="col-md-6 col-lg-4">
+                            <div class="category-card card h-100 border-0" style="opacity: 1; transform: translateY(0px); transition: opacity 0.5s, transform 0.5s;">
+                                <div class="position-relative overflow-hidden">
+                                    <img src="./Eiser Ecommerce_files/img.jpg" class="category-img w-100" alt="Refrigerators ">
+                                    <div class="card-img-overlay d-flex align-items-center justify-content-center bg-dark bg-opacity-30 opacity-0 hover-opacity-100 transition">
+                                        <a href="http://localhost/electronics/shop.php?id=21" class="btn btn-accent">View Collection</a>
+                                    </div>
+                                </div>
+                                <div class="card-body text-center">
+                                    <h4 class="card-title">Refrigerators </h4>
+                                </div>
+                            </div>
+                        </div>
+                                                <div class="col-md-6 col-lg-4">
+                            <div class="category-card card h-100 border-0" style="opacity: 1; transform: translateY(0px); transition: opacity 0.5s, transform 0.5s;">
+                                <div class="position-relative overflow-hidden">
+                                    <img src="./Eiser Ecommerce_files/71nQzY-b-uL._AC_UL320_.jpg" class="category-img w-100" alt="Microwaves">
+                                    <div class="card-img-overlay d-flex align-items-center justify-content-center bg-dark bg-opacity-30 opacity-0 hover-opacity-100 transition">
+                                        <a href="http://localhost/electronics/shop.php?id=24" class="btn btn-accent">View Collection</a>
+                                    </div>
+                                </div>
+                                <div class="card-body text-center">
+                                    <h4 class="card-title">Microwaves</h4>
+                                </div>
+                            </div>
+                        </div>
+                                                <div class="col-md-6 col-lg-4">
+                            <div class="category-card card h-100 border-0" style="opacity: 1; transform: translateY(0px); transition: opacity 0.5s, transform 0.5s;">
+                                <div class="position-relative overflow-hidden">
+                                    <img src="./Eiser Ecommerce_files/71XvQfZoNJL._AC_UL320_.jpg" class="category-img w-100" alt="Washing machines">
+                                    <div class="card-img-overlay d-flex align-items-center justify-content-center bg-dark bg-opacity-30 opacity-0 hover-opacity-100 transition">
+                                        <a href="http://localhost/electronics/shop.php?id=25" class="btn btn-accent">View Collection</a>
+                                    </div>
+                                </div>
+                                <div class="card-body text-center">
+                                    <h4 class="card-title">Washing machines</h4>
+                                </div>
+                            </div>
+                        </div>
+                                                <div class="col-md-6 col-lg-4">
+                            <div class="category-card card h-100 border-0" style="opacity: 1; transform: translateY(0px); transition: opacity 0.5s, transform 0.5s;">
+                                <div class="position-relative overflow-hidden">
+                                    <img src="./Eiser Ecommerce_files/71xQtZAXBWL._SY450_.jpg" class="category-img w-100" alt="Smart TV">
+                                    <div class="card-img-overlay d-flex align-items-center justify-content-center bg-dark bg-opacity-30 opacity-0 hover-opacity-100 transition">
+                                        <a href="http://localhost/electronics/shop.php?id=27" class="btn btn-accent">View Collection</a>
+                                    </div>
+                                </div>
+                                <div class="card-body text-center">
+                                    <h4 class="card-title">Smart TV</h4>
+                                </div>
+                            </div>
+                        </div>
+                                                <div class="col-md-6 col-lg-4">
+                            <div class="category-card card h-100 border-0" style="opacity: 1; transform: translateY(0px); transition: opacity 0.5s, transform 0.5s;">
+                                <div class="position-relative overflow-hidden">
+                                    <img src="./Eiser Ecommerce_files/41ycdcTPV4L._SX679_.jpg" class="category-img w-100" alt="Straightener ">
+                                    <div class="card-img-overlay d-flex align-items-center justify-content-center bg-dark bg-opacity-30 opacity-0 hover-opacity-100 transition">
+                                        <a href="http://localhost/electronics/shop.php?id=28" class="btn btn-accent">View Collection</a>
+                                    </div>
+                                </div>
+                                <div class="card-body text-center">
+                                    <h4 class="card-title">Straightener </h4>
+                                </div>
+                            </div>
+                        </div>
+                                    </div>
+
+            <div class="text-center mt-4">
+                <a href="http://localhost/electronics/shop.php" class="btn btn-outline-dark px-4">View All Collections</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section id="featured" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title mb-4">Featured Selection</h2>
+            <p class="text-center text-muted mb-5">Our current favorites</p>
+
+            <div class="row g-4">
+                                        <div class="col-md-6 col-lg-3">
+                            <div class="product-card card h-100 border-0" style="opacity: 1; transform: translateY(0px); transition: opacity 0.5s, transform 0.5s;">
+                                <div class="product-img-container position-relative">
+                                    <img src="./Eiser Ecommerce_files/air 1.jpg" class="product-img" alt="Haier">
+                                                                            <span class="product-badge badge bg-danger">-2%</span>
+                                                                        <div class="product-actions">
+                                        <a href="http://localhost/electronics/wishlist_insert.php?id=9" class="btn btn-light rounded-circle mx-1" title="Add to Wishlist">
+                                            <i class="bi bi-heart text-danger"></i>
+                                        </a>
+                                        <form action="http://localhost/electronics/single-product.php" method="post" class="d-inline">
+                                            <input type="hidden" name="id" value="9">
+                                            <button type="submit" class="btn btn-sm btn-light rounded-circle shadow-sm">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Haier</h5>
+                                    <!-- <p class="card-text text-muted small mb-3">SHARP 1.5 Ton 5 Star Inverter Split AC (Copper, 7 Years Comprehensive Warranty, 7 Stage Health Filters, 7in1 Convertible, 2025 Model, AHSI18V5BSC, White)</p> -->
+                                    <div class="mb-3">
+                                        <span class="h5 text-dark">₹421,400.00</span>
+                                                                                    <span class="text-decoration-line-through text-muted ms-2">₹430,000.00</span>
+                                                                            </div>
+                                    <form action="http://localhost/electronics/cart_insert.php" method="post" class="d-grid">
+                                        <input type="hidden" name="id" value="9">
+                                        <input type="hidden" name="cart_qty" value="1">
+                                        <button type="submit" class="btn btn-dark">
+                                            <i class="bi bi-cart-plus me-2"></i> Add to Cart
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                                                <div class="col-md-6 col-lg-3">
+                            <div class="product-card card h-100 border-0" style="opacity: 1; transform: translateY(0px); transition: opacity 0.5s, transform 0.5s;">
+                                <div class="product-img-container position-relative">
+                                    <img src="./Eiser Ecommerce_files/61+pdg8CfmL._SX679_.jpg" class="product-img" alt="LG 242 L 3">
+                                                                            <span class="product-badge badge bg-danger">-33%</span>
+                                                                        <div class="product-actions">
+                                        <a href="http://localhost/electronics/wishlist_insert.php?id=18" class="btn btn-light rounded-circle mx-1" title="Add to Wishlist">
+                                            <i class="bi bi-heart text-danger"></i>
+                                        </a>
+                                        <form action="http://localhost/electronics/single-product.php" method="post" class="d-inline">
+                                            <input type="hidden" name="id" value="18">
+                                            <button type="submit" class="btn btn-sm btn-light rounded-circle shadow-sm">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">LG 242 L 3</h5>
+                                    <!-- <p class="card-text text-muted small mb-3">LG 242 L 3 Star Smart Inverter Frost-Free Double Door Refrigerator (GL-I292RPZX, Shiny Steel, Door Cooling+</p> -->
+                                    <div class="mb-3">
+                                        <span class="h5 text-dark">₹24,856.33</span>
+                                                                                    <span class="text-decoration-line-through text-muted ms-2">₹37,099.00</span>
+                                                                            </div>
+                                    <form action="http://localhost/electronics/cart_insert.php" method="post" class="d-grid">
+                                        <input type="hidden" name="id" value="18">
+                                        <input type="hidden" name="cart_qty" value="1">
+                                        <button type="submit" class="btn btn-dark">
+                                            <i class="bi bi-cart-plus me-2"></i> Add to Cart
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                                    </div>
+
+            <div class="text-center mt-4">
+                <a href="http://localhost/electronics/shop.php" class="btn btn-outline-dark px-4">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="mb-3">Join Our Community</h2>
+                    <p class="text-muted mb-4">Subscribe for exclusive offers and style inspiration</p>
+                    <form class="newsletter-form d-flex">
+                        <input type="email" class="form-control" placeholder="Your email address" required="">
+                        <button type="submit" class="btn btn-accent">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="./Eiser Ecommerce_files/bootstrap.bundle.min.js.download"></script>
+    <!-- Custom JS -->
+    <script>
+        // Simple animation for elements when they come into view
+        document.addEventListener('DOMContentLoaded', function () {
+            const animateOnScroll = function () {
+                const elements = document.querySelectorAll('.feature-card, .category-card, .product-card');
+
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.2;
+
+                    if (elementPosition < screenPosition) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+
+            // Set initial state
+            const cards = document.querySelectorAll('.feature-card, .category-card, .product-card');
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+
+            // Run on load and scroll
+            animateOnScroll();
+            window.addEventListener('scroll', animateOnScroll);
+        });
+    </script>
+
+
+
+<footer class="footer-area bg-dark text-white pt-5">
+    <div class="container">
+        <div class="row g-4">
+            <!-- About Column -->
+            <div class="col-lg-4 col-md-6">
+                <div class="single-footer-widget">
+                    <a href="http://localhost/electronics/index.php" class="d-block mb-3">
+                    </a>
+                    <p class="mb-4 text-white-50">Eiser is a premium e-commerce platform offering high-quality products
+                        with exceptional customer service.</p>
+                    <div class="social-icons">
+                        <a href="http://localhost/electronics/index.php#" class="text-white me-3 hover-primary"><i class="fab fa-facebook-f"></i></a>
+                        <a href="http://localhost/electronics/index.php#" class="text-white me-3 hover-primary"><i class="fab fa-twitter"></i></a>
+                        <a href="http://localhost/electronics/index.php#" class="text-white me-3 hover-primary"><i class="fab fa-instagram"></i></a>
+                        <a href="http://localhost/electronics/index.php#" class="text-white me-3 hover-primary"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-lg-2 col-md-6">
+                <div class="single-footer-widget">
+                    <h4 class="mb-4 text-white">Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="http://localhost/electronics/index.php" class="text-white-50 hover-white">Home</a></li>
+                        <li class="mb-2"><a href="http://localhost/electronics/shop.php" class="text-white-50 hover-white">Shop</a></li>
+                        <li class="mb-2"><a href="http://localhost/electronics/about.php" class="text-white-50 hover-white">About Us</a></li>
+                        <li class="mb-2"><a href="http://localhost/electronics/contact.php" class="text-white-50 hover-white">Contact</a></li>
+                        <li class="mb-2"><a href="http://localhost/electronics/blog.php" class="text-white-50 hover-white">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Customer Service -->
+            <div class="col-lg-2 col-md-6">
+                <div class="single-footer-widget">
+                    <h4 class="mb-4 text-white">Customer Service</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="http://localhost/electronics/faq.php" class="text-white-50 hover-white">FAQs</a></li>
+                        <li class="mb-2"><a href="http://localhost/electronics/shipping.php" class="text-white-50 hover-white">Shipping Policy</a>
+                        </li>
+                        <li class="mb-2"><a href="http://localhost/electronics/returns.php" class="text-white-50 hover-white">Returns &amp; Refunds</a>
+                        </li>
+                        <li class="mb-2"><a href="http://localhost/electronics/privacy.php" class="text-white-50 hover-white">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="http://localhost/electronics/terms.php" class="text-white-50 hover-white">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-lg-4 col-md-6">
+                <div class="single-footer-widget">
+                    <h4 class="mb-4 text-white">Contact Us</h4>
+                    <ul class="list-unstyled contact-info">
+                        <li class="mb-3 d-flex align-items-center">
+                            <i class="fas fa-map-marker-alt me-3 text-primary"></i>
+                            <span class="text-white-50">123 Street, City, Country</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-center">
+                            <i class="fas fa-phone-alt me-3 text-primary"></i>
+                            <span class="text-white-50">+01 234 567 890</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-center">
+                            <i class="fas fa-envelope me-3 text-primary"></i>
+                            <span class="text-white-50">info@eiser.com</span>
+                        </li>
+                    </ul>
+
+                    <!-- Newsletter -->
+                    <div class="newsletter mt-4">
+                        <h5 class="mb-3 text-white">Newsletter</h5>
+                        <p class="small text-white-50 mb-3">Subscribe for updates and special offers</p>
+                        <form class="d-flex">
+                            <input type="email" class="form-control rounded-0 bg-transparent text-white border-secondary" placeholder="Your Email" required="">
+                            <button type="submit" class="btn btn-primary rounded-0 px-3">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom mt-5 pt-4 border-top border-secondary">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <p class="m-0 small text-white-50">
+                        ©
+                        <script>document.write(new Date().getFullYear());</script>2025 Eiser. All rights reserved.
+                    </p>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-visa me-2 text-white-50 hover-white"></i>
+                        <i class="fab fa-cc-mastercard me-2 text-white-50 hover-white"></i>
+                        <i class="fab fa-cc-paypal me-2 text-white-50 hover-white"></i>
+                        <i class="fab fa-cc-amex text-white-50 hover-white"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="./Eiser Ecommerce_files/bootstrap.bundle.min.js.download"></script>
+<script src="./Eiser Ecommerce_files/jquery-3.6.0.min.js.download"></script>
+<script src="./Eiser Ecommerce_files/main.js.download"></script></body></html>

@@ -87,14 +87,17 @@ include "db_connection.php";
                                     <?php
                                     $customer_id = $_SESSION['customer_id'];
                                     $subtotal = 0;
-                                    $query = "SELECT * FROM `tbl_cart` INNER JOIN tbl_product ON tbl_cart.cart_product_id = tbl_product.id WHERE tbl_cart.cart_customer_id = '$customer_id' ";
+                                    $query = "SELECT * FROM `tbl_cart` INNER JOIN tbl_product ON tbl_cart.cart_product_id = tbl_product.id WHERE tbl_cart.cart_customer_id = '$customer_id'  ";
                                     $result = mysqli_query($conn, $query);
                                     while ($row = mysqli_fetch_array($result)) {
-                                        $price = is_numeric($row["sale_price"]) ? (float) $row["sale_price"] : 0;
-                                        $qty = is_numeric($row["cart_qty"]) ? (int) $row["cart_qty"] : 0;
-                                        $item_total = $price * $qty;
-                                        $subtotal += $item_total;
-                                        ?>
+                                            $price = is_numeric($row["sale_price"]) ? (float) $row["sale_price"] : 0;
+                                            $qty = is_numeric($row["cart_qty"]) ? (int) $row["cart_qty"] : 0;
+                                            $item_total = $price * $qty;
+                                            if($row['cart_status'] == 'active'){
+                                                $subtotal += $item_total;
+                                                
+                                            }
+                                             ?>
                                         <tr class="border-bottom">
                                             <td>
                                                 <form method="post" action="updatecartstatus.php">

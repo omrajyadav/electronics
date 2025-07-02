@@ -178,10 +178,10 @@ include "db_connection.php";
                             <span>Subtotal</span>
                             <span class="fw-semibold">₹<?= number_format($subtotal, 2) ?></span>
                         </div>
-                        <div class="d-flex justify-content-between mb-2">
+                        <!-- <div class="d-flex justify-content-between mb-2">
                             <span>Shipping</span>
                             <span class="fw-semibold">₹<?= number_format(10, 2) ?></span>
-                        </div>
+                        </div> -->
                         <div class="d-flex justify-content-between mb-3">
                             <span>Tax</span>
                             <span class="fw-semibold">₹<?= number_format($subtotal * 0.01, 2) ?></span>

@@ -18,3 +18,5 @@ order success
 ![alt text](image-8.png)
 login page
 ![alt text](image-9.png)
+order hister
+![alt text](image-10.png)

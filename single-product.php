@@ -307,12 +307,16 @@ if (isset($_POST["id"])) {
 
                     <div class="price-container">
                         <?php if ($row["discount_percentaged"] > 0): ?>
-                            <span class="current-price">₹<?= number_format($sale_price, 2) ?></span>
+                            <span class="current-price" id="unitPrice">₹<?= number_format($sale_price, 2) ?></span>
                             <span class="original-price">₹<?= number_format($row["MRP"], 2) ?></span>
                             <span class="discount-badge"><?= $row["discount_percentaged"] ?>% OFF</span>
                         <?php else: ?>
-                            <span class="current-price">₹<?= number_format($row["MRP"], 2) ?></span>
+                            <span class="current-price" id="unitPrice">₹<?= number_format($row["MRP"], 2) ?></span>
                         <?php endif; ?>
+                        <div class="mt-2">
+                            <span class="fw-bold">Subtotal:</span>
+                            <span id="subtotal" class="text-primary">₹<?= number_format(($row["discount_percentaged"] > 0 ? $sale_price : $row["MRP"]), 2) ?></span>
+                        </div>
                     </div>
 
                     <div class="rating">
@@ -369,18 +373,29 @@ if (isset($_POST["id"])) {
     </div>
 
     <script>
-        // Quantity selector functionality
+        // Quantity selector functionality + live subtotal
         document.addEventListener('DOMContentLoaded', function () {
             const minusBtn = document.querySelector('.quantity-btn.minus');
             const plusBtn = document.querySelector('.quantity-btn.plus');
             const quantityInput = document.getElementById('productQuantity');
             const cartQtyField = document.getElementById('cartQtyField');
+            const subtotalSpan = document.getElementById('subtotal');
+            // Get unit price from PHP
+            const unitPrice = <?= ($row["discount_percentaged"] > 0 ? $sale_price : $row["MRP"]) ?>;
+
+            function updateSubtotal() {
+                let qty = parseInt(quantityInput.value);
+                if (isNaN(qty) || qty < 1) qty = 1;
+                const subtotal = unitPrice * qty;
+                subtotalSpan.textContent = '₹' + subtotal.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+            }
 
             minusBtn.addEventListener('click', function () {
                 let value = parseInt(quantityInput.value);
                 if (value > 1) {
                     quantityInput.value = value - 1;
                     cartQtyField.value = quantityInput.value;
+                    updateSubtotal();
                 }
             });
 
@@ -388,6 +403,7 @@ if (isset($_POST["id"])) {
                 let value = parseInt(quantityInput.value);
                 quantityInput.value = value + 1;
                 cartQtyField.value = quantityInput.value;
+                updateSubtotal();
             });
 
             quantityInput.addEventListener('change', function () {
@@ -396,7 +412,11 @@ if (isset($_POST["id"])) {
                     this.value = 1;
                 }
                 cartQtyField.value = this.value;
+                updateSubtotal();
             });
+
+            // Initial subtotal
+            updateSubtotal();
         });
     </script>
 
